@@ -97,3 +97,5 @@ D:\STUDY\HK6\TTCS\QLVT\QLVT\obj\Debug\QLVT.XtraReportTacGia.resources
 D:\STUDY\HK6\TTCS\QLVT\QLVT\obj\Debug\QLVT.XtraReportTPNT.resources
 D:\STUDY\HK6\TTCS\QLVT\QLVT\obj\Debug\QLVT.FormReportTrienLam.resources
 D:\STUDY\HK6\TTCS\QLVT\QLVT\obj\Debug\QLVT.XtraReportTrienLam.resources
+D:\STUDY\HK6\TTCS\QLVT\QLVT\obj\Debug\QLVT.FormBackup.resources
+D:\STUDY\HK6\TTCS\QLVT\QLVT\obj\Debug\QLVT.FormRestore.resources

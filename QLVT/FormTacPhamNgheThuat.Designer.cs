@@ -380,6 +380,7 @@
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
             this.tableAdapterManager.TTTACGIATableAdapter = null;
+            this.tableAdapterManager.TTTPNTTableAdapter = null;
             this.tableAdapterManager.TTXUATXUTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;

@@ -320,6 +320,7 @@
             this.btn_restore.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_restore.ImageOptions.Image")));
             this.btn_restore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_restore.ImageOptions.LargeImage")));
             this.btn_restore.Name = "btn_restore";
+            this.btn_restore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_restore_ItemClick);
             // 
             // ribbonPageNhapXuat
             // 

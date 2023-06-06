@@ -82,7 +82,16 @@ namespace QLVT
 
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form form = this.CheckExists(typeof(FormBackup));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormBackup f = new FormBackup();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
         }
         private void DangXuat()
         {
@@ -218,6 +227,20 @@ namespace QLVT
                 else
                 {
                     FormReportTrienLam f = new FormReportTrienLam();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void btn_restore_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormRestore));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormRestore f = new FormRestore();
                     f.MdiParent = this;
                     f.Show();
                 }

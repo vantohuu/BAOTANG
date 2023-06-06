@@ -78,6 +78,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BAOTANGDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBackup.Designer.cs">
+      <DependentUpon>FormBackup.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBoSuuTam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     </Compile>
     <Compile Include="FormReportTrienLam.Designer.cs">
       <DependentUpon>FormReportTrienLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRestore.Designer.cs">
+      <DependentUpon>FormRestore.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSoHuu.cs">
       <SubType>Form</SubType>
@@ -176,6 +188,9 @@
     <Compile Include="XtraReportTrienLam.Designer.cs">
       <DependentUpon>XtraReportTrienLam.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormBackup.resx">
+      <DependentUpon>FormBackup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBoSuuTam.resx">
       <DependentUpon>FormBoSuuTam.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReportTrienLam.resx">
       <DependentUpon>FormReportTrienLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRestore.resx">
+      <DependentUpon>FormRestore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSoHuu.resx">
       <DependentUpon>FormSoHuu.cs</DependentUpon>
