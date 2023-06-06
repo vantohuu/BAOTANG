@@ -31,9 +31,7 @@ namespace QLVT
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbChiNhanh = new System.Windows.Forms.ComboBox();
             this.lbDangNhap = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.teUserName = new DevExpress.XtraEditors.TextEdit();
             this.tePassword = new DevExpress.XtraEditors.TextEdit();
@@ -42,16 +40,6 @@ namespace QLVT
             ((System.ComponentModel.ISupportInitialize)(this.teUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tePassword.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbChiNhanh
-            // 
-            this.cbChiNhanh.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.cbChiNhanh.FormattingEnabled = true;
-            this.cbChiNhanh.Location = new System.Drawing.Point(82, 105);
-            this.cbChiNhanh.Name = "cbChiNhanh";
-            this.cbChiNhanh.Size = new System.Drawing.Size(597, 35);
-            this.cbChiNhanh.TabIndex = 0;
-            this.cbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lbDangNhap
             // 
@@ -66,23 +54,11 @@ namespace QLVT
             this.lbDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbDangNhap.Click += new System.EventHandler(this.lbDangNhap_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.label1.Location = new System.Drawing.Point(77, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 27);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Chọn chi nhánh";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.label2.Location = new System.Drawing.Point(77, 143);
+            this.label2.Location = new System.Drawing.Point(76, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 27);
             this.label2.TabIndex = 3;
@@ -91,7 +67,7 @@ namespace QLVT
             // 
             // teUserName
             // 
-            this.teUserName.Location = new System.Drawing.Point(82, 173);
+            this.teUserName.Location = new System.Drawing.Point(81, 131);
             this.teUserName.Name = "teUserName";
             this.teUserName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.teUserName.Properties.Appearance.Options.UseFont = true;
@@ -100,7 +76,7 @@ namespace QLVT
             // 
             // tePassword
             // 
-            this.tePassword.Location = new System.Drawing.Point(82, 240);
+            this.tePassword.Location = new System.Drawing.Point(81, 198);
             this.tePassword.Name = "tePassword";
             this.tePassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 13F);
             this.tePassword.Properties.Appearance.Options.UseFont = true;
@@ -113,7 +89,7 @@ namespace QLVT
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 13F);
-            this.label3.Location = new System.Drawing.Point(77, 210);
+            this.label3.Location = new System.Drawing.Point(76, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 27);
             this.label3.TabIndex = 5;
@@ -125,7 +101,7 @@ namespace QLVT
             this.btnDangNhap.FlatAppearance.BorderSize = 0;
             this.btnDangNhap.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(267, 363);
+            this.btnDangNhap.Location = new System.Drawing.Point(258, 318);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(247, 44);
             this.btnDangNhap.TabIndex = 7;
@@ -143,9 +119,7 @@ namespace QLVT
             this.Controls.Add(this.label3);
             this.Controls.Add(this.teUserName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbDangNhap);
-            this.Controls.Add(this.cbChiNhanh);
             this.Name = "FormDangNhap";
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.FormDangNhap_Load);
@@ -157,10 +131,7 @@ namespace QLVT
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbChiNhanh;
         private System.Windows.Forms.Label lbDangNhap;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.TextEdit teUserName;
         private DevExpress.XtraEditors.TextEdit tePassword;

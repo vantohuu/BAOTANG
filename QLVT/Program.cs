@@ -13,13 +13,13 @@ namespace QLVT
     {
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source= HP;Initial Catalog= QLVT; Integrated Security = True";     
+        public static String connstr_publisher = "Data Source= HP;Initial Catalog= BAOTANG; Integrated Security = True";     
         public static SqlDataAdapter da;
         public static SqlDataReader myReader;
         public static String servername = "HP";
         public static String username = "";
         public static String password = "";
-        public static String database = "QLVT";
+        public static String database = "BAOTANG";
         public static String remotelogin = "htkn";
         public static String remotepassword = "123456";
         public static String mloginDN = "";
@@ -27,10 +27,9 @@ namespace QLVT
         public static String mHoTen = "";
         public static String mGroup = "";
         public static String mlogin = "";
-        public static int mChinhNhanh = 0;
+        public static bool check_them_gl = true;
+        public static int maso = 0;
         
-
-        public static BindingSource bds_dspm = new BindingSource();
         public static FormMain formChinh;
 
         public static int KetNoi()

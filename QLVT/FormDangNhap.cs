@@ -20,18 +20,6 @@ namespace QLVT
             InitializeComponent();
         }
 
-        private void LayDSPM(String cmd)
-        {
-            DataTable dt = new DataTable();
-            if (conn_publisher.State == ConnectionState.Closed) conn_publisher.Open();
-            SqlDataAdapter da = new SqlDataAdapter(cmd, conn_publisher);
-            da.Fill(dt);
-            conn_publisher.Close();
-            Program.bds_dspm.DataSource = dt;
-            cbChiNhanh.DataSource = Program.bds_dspm;
-            cbChiNhanh.DisplayMember = "TENCN"; 
-            cbChiNhanh.ValueMember = "TENSERVER";
-        }
         private int KetNoi_CSDLGOC()
         {
             if (conn_publisher != null & conn_publisher.State == ConnectionState.Open)
@@ -56,9 +44,7 @@ namespace QLVT
         private void FormDangNhap_Load(object sender, EventArgs e)
         {
             if (KetNoi_CSDLGOC() == 0) return;
-            LayDSPM("SELECT * FROM Get_Subscribes");
-            cbChiNhanh.SelectedIndex = 0;
-            Program.servername = cbChiNhanh.SelectedValue.ToString();
+      
         }
 
         private void lbDangNhap_Click(object sender, EventArgs e)
@@ -66,15 +52,6 @@ namespace QLVT
             
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                Program.servername = cbChiNhanh.SelectedValue.ToString();
-                Console.WriteLine(Program.servername);
-            }
-            catch (Exception) { }
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -99,7 +76,6 @@ namespace QLVT
 
             if (Program.KetNoi() == 0) return;
 
-            Program.mChinhNhanh = cbChiNhanh.SelectedIndex;
             Program.mloginDN = Program.mlogin;
             Program.passworDN = Program.password;
 
@@ -110,23 +86,24 @@ namespace QLVT
             Program.myReader = Program.ExecSqlDataReader(strLenh);
             if (Program.myReader == null) return;
             Program.myReader.Read();
-            Program.username = Program.myReader.GetInt32(0).ToString();
+            Program.username = Program.myReader.GetString(0);
 
             if (Convert.IsDBNull(Program.username))
             {
                 MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu " +
                     "\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
             }    
-            Program.mHoTen = Program.myReader.GetString(1);
-            Program.mGroup = Program.myReader.GetString(2);
+            Program.mHoTen = Program.myReader.GetString(0);
+            Program.mGroup = Program.myReader.GetString(1);
             Program.myReader.Close();
 
             Program.conn.Close();
 
-            Program.formChinh.MANV.Text = "Mã NV : " + Program.username;
             Program.formChinh.HOTEN.Text = "Họ tên : " + Program.mHoTen;
             Program.formChinh.NHOM.Text = "Nhóm : " + Program.mGroup;
             Program.formChinh.HienThiMenu();
+
+            this.Close();   
         }
     }
 }
