@@ -33,6 +33,13 @@ namespace QLVT
                 MessageBox.Show("Đến ngày bị trống!", "", MessageBoxButtons.OK);
                 return;
             }
+
+            if (DateTime.Parse(DENNGAY.Text.ToString()) < DateTime.Parse(TUNGAY.Text.ToString()))
+
+            {
+                MessageBox.Show("Thời gian sau phải lớn hơn thời gian trước!", "", MessageBoxButtons.OK);
+                return;
+            }
             XtraReportTrienLam rpt = new XtraReportTrienLam(DateTime.Parse(TUNGAY.Text.ToString()), DateTime.Parse(DENNGAY.Text.ToString()));
             rpt.sqlTrienLam.Connection.ConnectionString = Program.connstr;
             ReportPrintTool print = new ReportPrintTool(rpt);

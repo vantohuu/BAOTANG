@@ -189,17 +189,19 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BOSUUTAPTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.CT_TRIENLAMTableAdapter = null;
+            this.tableAdapterManager.DIEUKHAC_TACTUONGTableAdapter = null;
             this.tableAdapterManager.DIMUONTableAdapter = null;
             this.tableAdapterManager.HOIHOATableAdapter = null;
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = null;
             this.tableAdapterManager.TACGIATableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = null;
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
             this.tableAdapterManager.TTTACGIATableAdapter = null;
+            this.tableAdapterManager.TTTPNTTableAdapter = null;
             this.tableAdapterManager.TTXUATXUTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
@@ -227,7 +229,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormDieuKhacTacTuong";
-            this.Text = "FormDieuKhacTacTuong";
+            this.Text = "Điêu khắc - Tạc tượng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDieuKhacTacTuong_FormClosing);
             this.Load += new System.EventHandler(this.FormDieuKhacTacTuong_Load);
             this.panel1.ResumeLayout(false);

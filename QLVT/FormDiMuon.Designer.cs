@@ -233,11 +233,11 @@
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = null;
             this.tableAdapterManager.TACGIATableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = null;
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
             this.tableAdapterManager.TTTACGIATableAdapter = null;
+            this.tableAdapterManager.TTTPNTTableAdapter = null;
             this.tableAdapterManager.TTXUATXUTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
@@ -255,7 +255,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormDiMuon";
-            this.Text = "FormDiMuon";
+            this.Text = "Đi mượn";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDiMuon_FormClosing);
             this.Load += new System.EventHandler(this.FormDiMuon_Load);
             this.panel1.ResumeLayout(false);

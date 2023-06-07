@@ -267,7 +267,13 @@ namespace QLVT
                 if (NGAYKETTHUC.Text.Trim() == "")
                 {
                     MessageBox.Show("Ngày kết thúc không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                    NGAYBATDAU.Focus();
+                    NGAYKETTHUC.Focus();
+                    return;
+                }
+                if (DateTime.Parse(NGAYKETTHUC.Text.ToString()) < DateTime.Parse(NGAYBATDAU.Text.ToString()))
+
+                {
+                    MessageBox.Show("Thời gian sau phải lớn hơn thời gian trước!", "", MessageBoxButtons.OK);
                     return;
                 }
                 if (TEN.Text.Trim() == "")

@@ -375,7 +375,6 @@
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = null;
             this.tableAdapterManager.TACGIATableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = this.tpntTA;
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
@@ -590,6 +589,7 @@
             // 
             // colMASO
             // 
+            this.colMASO.Caption = "Mã số";
             this.colMASO.FieldName = "MASO";
             this.colMASO.MinWidth = 25;
             this.colMASO.Name = "colMASO";
@@ -599,6 +599,7 @@
             // 
             // colNAMST
             // 
+            this.colNAMST.Caption = "Năm sáng tác";
             this.colNAMST.FieldName = "NAMST";
             this.colNAMST.MinWidth = 25;
             this.colNAMST.Name = "colNAMST";
@@ -608,6 +609,7 @@
             // 
             // colCHUDE
             // 
+            this.colCHUDE.Caption = "Chủ đề";
             this.colCHUDE.FieldName = "CHUDE";
             this.colCHUDE.MinWidth = 25;
             this.colCHUDE.Name = "colCHUDE";
@@ -617,6 +619,7 @@
             // 
             // colLOIDIENGIAI
             // 
+            this.colLOIDIENGIAI.Caption = "Lời diễn giải";
             this.colLOIDIENGIAI.FieldName = "LOIDIENGIAI";
             this.colLOIDIENGIAI.MinWidth = 25;
             this.colLOIDIENGIAI.Name = "colLOIDIENGIAI";
@@ -626,6 +629,7 @@
             // 
             // colTENTG
             // 
+            this.colTENTG.Caption = "Tên tác giả";
             this.colTENTG.FieldName = "TENTG";
             this.colTENTG.MinWidth = 25;
             this.colTENTG.Name = "colTENTG";
@@ -635,6 +639,7 @@
             // 
             // colIDXX
             // 
+            this.colIDXX.Caption = "ID xuất xứ";
             this.colIDXX.FieldName = "IDXX";
             this.colIDXX.MinWidth = 25;
             this.colIDXX.Name = "colIDXX";
@@ -665,7 +670,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormTacPhamNgheThuat";
-            this.Text = "FormTacPhamNgheThuat";
+            this.Text = "Tác phẩm nghệ thuật";
             this.Load += new System.EventHandler(this.FormTacPhamNgheThuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpntBS)).EndInit();

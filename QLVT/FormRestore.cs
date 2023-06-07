@@ -22,7 +22,6 @@ namespace QLVT
         private void FormRestore_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'bAOTANGDataSet.RESTORE' table. You can move, or remove it, as needed.
-            this.RSTA.Fill(this.BAOTANGDS.RESTORE);
             BAOTANGDS.EnforceConstraints = false;
             this.RSTA.Connection.ConnectionString = Program.connstr;
             this.RSTA.Fill(this.BAOTANGDS.RESTORE);

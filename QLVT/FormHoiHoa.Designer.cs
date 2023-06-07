@@ -183,11 +183,11 @@
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = null;
             this.tableAdapterManager.TACGIATableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = null;
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
             this.tableAdapterManager.TTTACGIATableAdapter = null;
+            this.tableAdapterManager.TTTPNTTableAdapter = null;
             this.tableAdapterManager.TTXUATXUTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
@@ -201,7 +201,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormHoiHoa";
-            this.Text = "FormHoiHoa";
+            this.Text = "Hội họa";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHoiHoa_FormClosing);
             this.Load += new System.EventHandler(this.FormHoiHoa_Load);
             this.panel1.ResumeLayout(false);

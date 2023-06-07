@@ -331,7 +331,6 @@
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = null;
             this.tableAdapterManager.TACGIATableAdapter = this.tacGiaTA;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = this.tpntTA;
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
@@ -479,6 +478,7 @@
             // 
             // colTEN
             // 
+            this.colTEN.Caption = "Tên";
             this.colTEN.FieldName = "TEN";
             this.colTEN.MinWidth = 25;
             this.colTEN.Name = "colTEN";
@@ -488,6 +488,7 @@
             // 
             // colNGAYSINH
             // 
+            this.colNGAYSINH.Caption = "Ngày sinh";
             this.colNGAYSINH.FieldName = "NGAYSINH";
             this.colNGAYSINH.MinWidth = 25;
             this.colNGAYSINH.Name = "colNGAYSINH";
@@ -497,6 +498,7 @@
             // 
             // colNGAYMAT
             // 
+            this.colNGAYMAT.Caption = "Ngày mất";
             this.colNGAYMAT.FieldName = "NGAYMAT";
             this.colNGAYMAT.MinWidth = 25;
             this.colNGAYMAT.Name = "colNGAYMAT";
@@ -506,6 +508,7 @@
             // 
             // colQUOCTICH
             // 
+            this.colQUOCTICH.Caption = "Quốc tịch";
             this.colQUOCTICH.FieldName = "QUOCTICH";
             this.colQUOCTICH.MinWidth = 25;
             this.colQUOCTICH.Name = "colQUOCTICH";
@@ -515,6 +518,7 @@
             // 
             // colTHOIDAI
             // 
+            this.colTHOIDAI.Caption = "Thời đại";
             this.colTHOIDAI.FieldName = "THOIDAI";
             this.colTHOIDAI.MinWidth = 25;
             this.colTHOIDAI.Name = "colTHOIDAI";
@@ -524,6 +528,7 @@
             // 
             // colPHONGCACHCHINH
             // 
+            this.colPHONGCACHCHINH.Caption = "Phong cách chính";
             this.colPHONGCACHCHINH.FieldName = "PHONGCACHCHINH";
             this.colPHONGCACHCHINH.MinWidth = 25;
             this.colPHONGCACHCHINH.Name = "colPHONGCACHCHINH";
@@ -533,6 +538,7 @@
             // 
             // colDIENGIAI
             // 
+            this.colDIENGIAI.Caption = "Diễn giải";
             this.colDIENGIAI.FieldName = "DIENGIAI";
             this.colDIENGIAI.MinWidth = 25;
             this.colDIENGIAI.Name = "colDIENGIAI";
@@ -561,7 +567,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormTG";
-            this.Text = "FormTG";
+            this.Text = "Tác giả";
             this.Load += new System.EventHandler(this.FormTG_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tacGiaBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).EndInit();

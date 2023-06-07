@@ -30,23 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.RESTORE = new DevExpress.XtraEditors.SimpleButton();
-            this.historyRS = new DevExpress.XtraEditors.SimpleButton();
-            this.labelLS = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.BAOTANGDS = new QLVT.BAOTANGDataSet();
-            this.RSBS = new System.Windows.Forms.BindingSource(this.components);
-            this.RSTA = new QLVT.BAOTANGDataSetTableAdapters.RESTORETableAdapter();
-            this.tableAdapterManager = new QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager();
             this.restoreGridControl = new DevExpress.XtraGrid.GridControl();
+            this.RSBS = new System.Windows.Forms.BindingSource(this.components);
+            this.BAOTANGDS = new QLVT.BAOTANGDataSet();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colrestore_date = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldestination_database_name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coluser_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RESTORE = new DevExpress.XtraEditors.SimpleButton();
+            this.historyRS = new DevExpress.XtraEditors.SimpleButton();
+            this.labelLS = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RSTA = new QLVT.BAOTANGDataSetTableAdapters.RESTORETableAdapter();
+            this.tableAdapterManager = new QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RSBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RSBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,69 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1055, 519);
             this.panel1.TabIndex = 1;
+            // 
+            // restoreGridControl
+            // 
+            this.restoreGridControl.DataSource = this.RSBS;
+            this.restoreGridControl.Location = new System.Drawing.Point(0, 187);
+            this.restoreGridControl.MainView = this.gridView1;
+            this.restoreGridControl.Name = "restoreGridControl";
+            this.restoreGridControl.Size = new System.Drawing.Size(1052, 220);
+            this.restoreGridControl.TabIndex = 4;
+            this.restoreGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.restoreGridControl.Visible = false;
+            // 
+            // RSBS
+            // 
+            this.RSBS.DataMember = "RESTORE";
+            this.RSBS.DataSource = this.BAOTANGDS;
+            // 
+            // BAOTANGDS
+            // 
+            this.BAOTANGDS.DataSetName = "BAOTANGDataSet";
+            this.BAOTANGDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colrestore_date,
+            this.coldestination_database_name,
+            this.coluser_name});
+            this.gridView1.GridControl = this.restoreGridControl;
+            this.gridView1.Name = "gridView1";
+            // 
+            // colrestore_date
+            // 
+            this.colrestore_date.DisplayFormat.FormatString = "G";
+            this.colrestore_date.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colrestore_date.FieldName = "restore_date";
+            this.colrestore_date.MinWidth = 25;
+            this.colrestore_date.Name = "colrestore_date";
+            this.colrestore_date.OptionsColumn.ReadOnly = true;
+            this.colrestore_date.Visible = true;
+            this.colrestore_date.VisibleIndex = 0;
+            this.colrestore_date.Width = 94;
+            // 
+            // coldestination_database_name
+            // 
+            this.coldestination_database_name.FieldName = "destination_database_name";
+            this.coldestination_database_name.MinWidth = 25;
+            this.coldestination_database_name.Name = "coldestination_database_name";
+            this.coldestination_database_name.OptionsColumn.ReadOnly = true;
+            this.coldestination_database_name.Visible = true;
+            this.coldestination_database_name.VisibleIndex = 1;
+            this.coldestination_database_name.Width = 94;
+            // 
+            // coluser_name
+            // 
+            this.coluser_name.FieldName = "user_name";
+            this.coluser_name.MinWidth = 25;
+            this.coluser_name.Name = "coluser_name";
+            this.coluser_name.OptionsColumn.ReadOnly = true;
+            this.coluser_name.Visible = true;
+            this.coluser_name.VisibleIndex = 2;
+            this.coluser_name.Width = 94;
             // 
             // RESTORE
             // 
@@ -102,16 +165,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "RESTORE";
             // 
-            // BAOTANGDS
-            // 
-            this.BAOTANGDS.DataSetName = "BAOTANGDataSet";
-            this.BAOTANGDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // RSBS
-            // 
-            this.RSBS.DataMember = "RESTORE";
-            this.RSBS.DataSource = this.BAOTANGDS;
-            // 
             // RSTA
             // 
             this.RSTA.ClearBeforeFill = true;
@@ -128,7 +181,6 @@
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = null;
             this.tableAdapterManager.TACGIATableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = null;
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
@@ -138,56 +190,6 @@
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
             // 
-            // restoreGridControl
-            // 
-            this.restoreGridControl.DataSource = this.RSBS;
-            this.restoreGridControl.Location = new System.Drawing.Point(0, 187);
-            this.restoreGridControl.MainView = this.gridView1;
-            this.restoreGridControl.Name = "restoreGridControl";
-            this.restoreGridControl.Size = new System.Drawing.Size(1052, 220);
-            this.restoreGridControl.TabIndex = 4;
-            this.restoreGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.restoreGridControl.Visible = false;
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colrestore_date,
-            this.coldestination_database_name,
-            this.coluser_name});
-            this.gridView1.GridControl = this.restoreGridControl;
-            this.gridView1.Name = "gridView1";
-            // 
-            // colrestore_date
-            // 
-            this.colrestore_date.DisplayFormat.FormatString = "G";
-            this.colrestore_date.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.colrestore_date.FieldName = "restore_date";
-            this.colrestore_date.MinWidth = 25;
-            this.colrestore_date.Name = "colrestore_date";
-            this.colrestore_date.Visible = true;
-            this.colrestore_date.VisibleIndex = 0;
-            this.colrestore_date.Width = 94;
-            // 
-            // coldestination_database_name
-            // 
-            this.coldestination_database_name.FieldName = "destination_database_name";
-            this.coldestination_database_name.MinWidth = 25;
-            this.coldestination_database_name.Name = "coldestination_database_name";
-            this.coldestination_database_name.Visible = true;
-            this.coldestination_database_name.VisibleIndex = 1;
-            this.coldestination_database_name.Width = 94;
-            // 
-            // coluser_name
-            // 
-            this.coluser_name.FieldName = "user_name";
-            this.coluser_name.MinWidth = 25;
-            this.coluser_name.Name = "coluser_name";
-            this.coluser_name.Visible = true;
-            this.coluser_name.VisibleIndex = 2;
-            this.coluser_name.Width = 94;
-            // 
             // FormRestore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,13 +197,13 @@
             this.ClientSize = new System.Drawing.Size(1055, 519);
             this.Controls.Add(this.panel1);
             this.Name = "FormRestore";
-            this.Text = "FormRestore";
+            this.Text = "Restore";
             this.Load += new System.EventHandler(this.FormRestore_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RSBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restoreGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RSBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 

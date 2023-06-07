@@ -199,7 +199,6 @@
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = null;
             this.tableAdapterManager.TACGIATableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = null;
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
@@ -216,7 +215,7 @@
             this.ClientSize = new System.Drawing.Size(1058, 601);
             this.Controls.Add(this.panel1);
             this.Name = "FormBackup";
-            this.Text = "FormBackup";
+            this.Text = "Backup";
             this.Load += new System.EventHandler(this.FormBackup_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -58,7 +58,11 @@ namespace QLVT
                 NGAYTRADM.Focus();
                 return;
             }
-
+            if (DateTime.Parse(NGAYTRADM.Text.ToString()) < DateTime.Parse(NGAYMUONDM.Text.ToString()))
+            {
+                MessageBox.Show("Thời gian sau phải lớn hơn thời gian trước!", "", MessageBoxButtons.OK);
+                return;
+            }
             this.Close();
         }
 

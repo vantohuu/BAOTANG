@@ -167,7 +167,7 @@ namespace QLVT
             //String laymaso = "Select [dbo].LayMaSo()";
             //Console.WriteLine(laymaso);
             CBLH.SelectedItem = null;
-            CBLH.SelectedItem = null;
+            CBLSH.SelectedItem = null;
             //try
             //{
             //    Program.myReader = Program.ExecSqlDataReader(laymaso);
@@ -278,7 +278,7 @@ namespace QLVT
                     return; 
                 }
                 CBLH.SelectedItem = null;
-                CBLH.SelectedItem = null;
+                CBLSH.SelectedItem = null;
                 query_them = "   " + chuoiLoaiHinh + "   " + chuoiSohuu;
                 Console.WriteLine(query_them);
                 vitri = tpntBS.Position;
@@ -452,7 +452,7 @@ namespace QLVT
             tpntGridControl.Enabled = true;
             tpntBS.Position = vitri;
             CBLH.SelectedItem = null;
-            CBLH.SelectedItem = null;
+            CBLSH.SelectedItem = null;
         }
 
         private void CBTAGGIA_SelectedIndexChanged(object sender, EventArgs e)
@@ -480,7 +480,7 @@ namespace QLVT
             tpntBS.Position = vitri;
             panel3.Enabled = false;
             CBLH.SelectedItem = null;
-            CBLH.SelectedItem = null;
+            CBLSH.SelectedItem = null;
 
         }
 

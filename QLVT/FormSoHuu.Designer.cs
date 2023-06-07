@@ -188,11 +188,11 @@
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = this.sOHUUTableAdapter;
             this.tableAdapterManager.TACGIATableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = null;
             this.tableAdapterManager.TRIENLAMTableAdapter = null;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
             this.tableAdapterManager.TTTACGIATableAdapter = null;
+            this.tableAdapterManager.TTTPNTTableAdapter = null;
             this.tableAdapterManager.TTXUATXUTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
@@ -207,7 +207,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormSoHuu";
-            this.Text = "FormSoHuu";
+            this.Text = "Sở hữu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSoHuu_FormClosing);
             this.Load += new System.EventHandler(this.FormSoHuu_Load);
             this.panel1.ResumeLayout(false);

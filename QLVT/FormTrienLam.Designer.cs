@@ -833,7 +833,6 @@
             this.tableAdapterManager.LOAIHINHKHACTableAdapter = null;
             this.tableAdapterManager.SOHUUTableAdapter = null;
             this.tableAdapterManager.TACGIATableAdapter = null;
-            this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TPNTTableAdapter = null;
             this.tableAdapterManager.TRIENLAMTableAdapter = this.trienlamTA;
             this.tableAdapterManager.TTBOSUUTAPTableAdapter = null;
@@ -880,7 +879,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormTrienLam";
-            this.Text = "FormTrienLam";
+            this.Text = "Triển lãm";
             this.Load += new System.EventHandler(this.FormTrienLam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).EndInit();
             this.panel3.ResumeLayout(false);
