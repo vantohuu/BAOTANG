@@ -43,6 +43,7 @@ namespace QLVT
         }
         private void FormTacPhamNgheThuat_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'BAOTANGDS.CTTPNT' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'BAOTANGDS.DIMUON' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'BAOTANGDS.TTXUATXU' table. You can move, or remove it, as needed.
 
@@ -57,6 +58,9 @@ namespace QLVT
             // TODO: This line of code loads data into the 'BAOTANGDS.TTTACGIA' table. You can move, or remove it, as needed.
             this.tacgiaTA.Connection.ConnectionString = Program.connstr;
             this.tacgiaTA.Fill(this.BAOTANGDS.TTTACGIA);
+            this.cttpntTA.Connection.ConnectionString = Program.connstr;
+            this.cttpntTA.Fill(this.BAOTANGDS.CTTPNT);
+
             CBLH.Items.Add("Điêu khắc - Tạc tượng");
             CBLH.Items.Add("Hội hoại");
             CBLH.Items.Add("Loại hình khác");
@@ -445,7 +449,7 @@ namespace QLVT
                 tpntBS.Position = vitri;
                 return;
             }
-
+            this.cttpntTA.Fill(this.BAOTANGDS.CTTPNT);
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnThoat.Enabled = btnReload.Enabled = btnPhucHoi.Enabled = true;
             btnGhi.Enabled = btnHuy.Enabled = false;
             panel3.Enabled = false;
@@ -495,6 +499,7 @@ namespace QLVT
             Program.ExecSqlNonQuery(query);
             Console.WriteLine(query);
             this.tpntTA.Fill(this.BAOTANGDS.TPNT);
+            this.cttpntTA.Fill(this.BAOTANGDS.CTTPNT);
             tpntGridControl.Enabled = true;
             btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReload.Enabled = btnThoat.Enabled = btnPhucHoi.Enabled = true;
             btnGhi.Enabled = btnHuy.Enabled = false;
@@ -508,6 +513,7 @@ namespace QLVT
                 this.tpntTA.Fill(this.BAOTANGDS.TPNT);
                 this.tacgiaTA.Fill(this.BAOTANGDS.TTTACGIA);
                 this.xuatxuTA.Fill(this.BAOTANGDS.TTXUATXU);
+                this.cttpntTA.Fill(this.BAOTANGDS.CTTPNT);
                 tpntBS.Position = vitri;
 
             }
@@ -524,6 +530,11 @@ namespace QLVT
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }

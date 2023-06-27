@@ -35,6 +35,9 @@
             System.Windows.Forms.Label vATLIEULabel;
             System.Windows.Forms.Label mASOLabel;
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dIEUKHAC_TACTUONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tPNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BAOTANGDS = new QLVT.BAOTANGDataSet();
             this.OK = new DevExpress.XtraEditors.SimpleButton();
             this.PHONGCACHDKTT = new DevExpress.XtraEditors.TextEdit();
             this.KHOILUONGDKTT = new DevExpress.XtraEditors.TextEdit();
@@ -42,27 +45,24 @@
             this.VATLIEUDKTT = new DevExpress.XtraEditors.TextEdit();
             this.MASODKTT = new DevExpress.XtraEditors.TextEdit();
             this.tableAdapterManager = new QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager();
-            this.BAOTANGDS = new QLVT.BAOTANGDataSet();
             this.dkttBS = new System.Windows.Forms.BindingSource(this.components);
             this.dkttTA = new QLVT.BAOTANGDataSetTableAdapters.DIEUKHAC_TACTUONGTableAdapter();
-            this.tPNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tPNTTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.TPNTTableAdapter();
-            this.dIEUKHAC_TACTUONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             pHONGCACHLabel = new System.Windows.Forms.Label();
             kHOILUONGLabel = new System.Windows.Forms.Label();
             cHIEUCAOLabel = new System.Windows.Forms.Label();
             vATLIEULabel = new System.Windows.Forms.Label();
             mASOLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dIEUKHAC_TACTUONGBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHONGCACHDKTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KHOILUONGDKTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHIEUCAODKTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VATLIEUDKTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASODKTT.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dkttBS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dIEUKHAC_TACTUONGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pHONGCACHLabel
@@ -126,8 +126,23 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(393, 340);
+            this.panel1.Size = new System.Drawing.Size(369, 331);
             this.panel1.TabIndex = 0;
+            // 
+            // dIEUKHAC_TACTUONGBindingSource
+            // 
+            this.dIEUKHAC_TACTUONGBindingSource.DataMember = "FK_DIEUKHAC_TACTUONG_TPNT";
+            this.dIEUKHAC_TACTUONGBindingSource.DataSource = this.tPNTBindingSource;
+            // 
+            // tPNTBindingSource
+            // 
+            this.tPNTBindingSource.DataMember = "TPNT";
+            this.tPNTBindingSource.DataSource = this.BAOTANGDS;
+            // 
+            // BAOTANGDS
+            // 
+            this.BAOTANGDS.DataSetName = "BAOTANGDataSet";
+            this.BAOTANGDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // OK
             // 
@@ -211,11 +226,6 @@
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
             // 
-            // BAOTANGDS
-            // 
-            this.BAOTANGDS.DataSetName = "BAOTANGDataSet";
-            this.BAOTANGDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dkttBS
             // 
             this.dkttBS.DataMember = "DIEUKHAC_TACTUONG";
@@ -225,25 +235,15 @@
             // 
             this.dkttTA.ClearBeforeFill = true;
             // 
-            // tPNTBindingSource
-            // 
-            this.tPNTBindingSource.DataMember = "TPNT";
-            this.tPNTBindingSource.DataSource = this.BAOTANGDS;
-            // 
             // tPNTTableAdapter
             // 
             this.tPNTTableAdapter.ClearBeforeFill = true;
-            // 
-            // dIEUKHAC_TACTUONGBindingSource
-            // 
-            this.dIEUKHAC_TACTUONGBindingSource.DataMember = "FK_DIEUKHAC_TACTUONG_TPNT";
-            this.dIEUKHAC_TACTUONGBindingSource.DataSource = this.tPNTBindingSource;
             // 
             // FormDieuKhacTacTuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 340);
+            this.ClientSize = new System.Drawing.Size(369, 331);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -253,15 +253,15 @@
             this.Load += new System.EventHandler(this.FormDieuKhacTacTuong_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dIEUKHAC_TACTUONGBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHONGCACHDKTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KHOILUONGDKTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHIEUCAODKTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VATLIEUDKTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASODKTT.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dkttBS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dIEUKHAC_TACTUONGBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

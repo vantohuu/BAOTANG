@@ -64,6 +64,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cttpntBS = new System.Windows.Forms.BindingSource(this.components);
             this.CBXUATXU = new System.Windows.Forms.ComboBox();
             this.xuatxuBS = new System.Windows.Forms.BindingSource(this.components);
             this.CBTAGGIA = new System.Windows.Forms.ComboBox();
@@ -85,6 +86,11 @@
             this.colIDXX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dimuonBS = new System.Windows.Forms.BindingSource(this.components);
             this.dimuonTA = new QLVT.BAOTANGDataSetTableAdapters.DIMUONTableAdapter();
+            this.cttpntTA = new QLVT.BAOTANGDataSetTableAdapters.CTTPNTTableAdapter();
+            this.lOAISOHUULabel1 = new System.Windows.Forms.Label();
+            this.lOAIHINHLabel1 = new System.Windows.Forms.Label();
+            this.cTLOAISOHUULabel1 = new System.Windows.Forms.Label();
+            this.cTLOAIHINHLabel1 = new System.Windows.Forms.Label();
             mASOLabel = new System.Windows.Forms.Label();
             nAMSTLabel = new System.Windows.Forms.Label();
             cHUDELabel = new System.Windows.Forms.Label();
@@ -102,6 +108,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cttpntBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xuatxuBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XUATXU.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TENTACGIA.Properties)).BeginInit();
@@ -181,7 +188,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(578, 207);
+            label2.Location = new System.Drawing.Point(765, 207);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(78, 16);
             label2.TabIndex = 16;
@@ -192,7 +199,7 @@
             label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.Location = new System.Drawing.Point(500, 14);
+            label3.Location = new System.Drawing.Point(511, 14);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(270, 25);
             label3.TabIndex = 4;
@@ -214,7 +221,7 @@
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 608);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 678);
             // 
             // barManager1
             // 
@@ -320,25 +327,25 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlTop.Size = new System.Drawing.Size(1101, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1123, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 638);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 708);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1101, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1123, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1101, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1123, 30);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 608);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 678);
             // 
             // tpntBS
             // 
@@ -398,7 +405,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1101, 52);
+            this.panel1.Size = new System.Drawing.Size(1123, 52);
             this.panel1.TabIndex = 20;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -409,11 +416,16 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 82);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1101, 556);
+            this.panel2.Size = new System.Drawing.Size(1123, 626);
             this.panel2.TabIndex = 21;
             // 
             // panel3
             // 
+            this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(this.cTLOAIHINHLabel1);
+            this.panel3.Controls.Add(this.cTLOAISOHUULabel1);
+            this.panel3.Controls.Add(this.lOAIHINHLabel1);
+            this.panel3.Controls.Add(this.lOAISOHUULabel1);
             this.panel3.Controls.Add(this.CBXUATXU);
             this.panel3.Controls.Add(this.CBTAGGIA);
             this.panel3.Controls.Add(label2);
@@ -436,8 +448,14 @@
             this.panel3.Enabled = false;
             this.panel3.Location = new System.Drawing.Point(0, 235);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1101, 321);
+            this.panel3.Size = new System.Drawing.Size(1123, 391);
             this.panel3.TabIndex = 1;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // cttpntBS
+            // 
+            this.cttpntBS.DataMember = "TPNT_CTTPNT";
+            this.cttpntBS.DataSource = this.tpntBS;
             // 
             // CBXUATXU
             // 
@@ -476,7 +494,7 @@
             // 
             this.CBLSH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBLSH.FormattingEnabled = true;
-            this.CBLSH.Location = new System.Drawing.Point(731, 204);
+            this.CBLSH.Location = new System.Drawing.Point(893, 204);
             this.CBLSH.Name = "CBLSH";
             this.CBLSH.Size = new System.Drawing.Size(161, 24);
             this.CBLSH.TabIndex = 15;
@@ -570,7 +588,7 @@
             this.tpntGridControl.Margin = new System.Windows.Forms.Padding(4);
             this.tpntGridControl.MenuManager = this.barManager1;
             this.tpntGridControl.Name = "tpntGridControl";
-            this.tpntGridControl.Size = new System.Drawing.Size(1101, 235);
+            this.tpntGridControl.Size = new System.Drawing.Size(1123, 235);
             this.tpntGridControl.TabIndex = 0;
             this.tpntGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -662,12 +680,56 @@
             // 
             this.dimuonTA.ClearBeforeFill = true;
             // 
+            // cttpntTA
+            // 
+            this.cttpntTA.ClearBeforeFill = true;
+            // 
+            // lOAISOHUULabel1
+            // 
+            this.lOAISOHUULabel1.AutoSize = true;
+            this.lOAISOHUULabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "LOAISOHUU", true));
+            this.lOAISOHUULabel1.Location = new System.Drawing.Point(765, 254);
+            this.lOAISOHUULabel1.Name = "lOAISOHUULabel1";
+            this.lOAISOHUULabel1.Size = new System.Drawing.Size(31, 16);
+            this.lOAISOHUULabel1.TabIndex = 20;
+            this.lOAISOHUULabel1.Text = "aaa";
+            // 
+            // lOAIHINHLabel1
+            // 
+            this.lOAIHINHLabel1.AutoSize = true;
+            this.lOAIHINHLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "LOAIHINH", true));
+            this.lOAIHINHLabel1.Location = new System.Drawing.Point(42, 254);
+            this.lOAIHINHLabel1.Name = "lOAIHINHLabel1";
+            this.lOAIHINHLabel1.Size = new System.Drawing.Size(31, 16);
+            this.lOAIHINHLabel1.TabIndex = 22;
+            this.lOAIHINHLabel1.Text = "aaa";
+            // 
+            // cTLOAISOHUULabel1
+            // 
+            this.cTLOAISOHUULabel1.AutoSize = true;
+            this.cTLOAISOHUULabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "CTLOAISOHUU", true));
+            this.cTLOAISOHUULabel1.Location = new System.Drawing.Point(765, 293);
+            this.cTLOAISOHUULabel1.Name = "cTLOAISOHUULabel1";
+            this.cTLOAISOHUULabel1.Size = new System.Drawing.Size(30, 16);
+            this.cTLOAISOHUULabel1.TabIndex = 23;
+            this.cTLOAISOHUULabel1.Text = "abc";
+            // 
+            // cTLOAIHINHLabel1
+            // 
+            this.cTLOAIHINHLabel1.AutoSize = true;
+            this.cTLOAIHINHLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "CTLOAIHINH", true));
+            this.cTLOAIHINHLabel1.Location = new System.Drawing.Point(42, 293);
+            this.cTLOAIHINHLabel1.Name = "cTLOAIHINHLabel1";
+            this.cTLOAIHINHLabel1.Size = new System.Drawing.Size(44, 16);
+            this.cTLOAIHINHLabel1.TabIndex = 24;
+            this.cTLOAIHINHLabel1.Text = "label4";
+            // 
             // FormTacPhamNgheThuat
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1101, 638);
+            this.ClientSize = new System.Drawing.Size(1123, 708);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
@@ -688,6 +750,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cttpntBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xuatxuBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XUATXU.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TENTACGIA.Properties)).EndInit();
@@ -752,5 +815,11 @@
         private System.Windows.Forms.BindingSource tpntBS;
         private System.Windows.Forms.BindingSource dimuonBS;
         private BAOTANGDataSetTableAdapters.DIMUONTableAdapter dimuonTA;
+        private System.Windows.Forms.BindingSource cttpntBS;
+        private BAOTANGDataSetTableAdapters.CTTPNTTableAdapter cttpntTA;
+        private System.Windows.Forms.Label cTLOAISOHUULabel1;
+        private System.Windows.Forms.Label lOAIHINHLabel1;
+        private System.Windows.Forms.Label lOAISOHUULabel1;
+        private System.Windows.Forms.Label cTLOAIHINHLabel1;
     }
 }

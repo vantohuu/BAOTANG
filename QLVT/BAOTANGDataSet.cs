@@ -13,3 +13,10 @@
         }
     }
 }
+
+namespace QLVT.BAOTANGDataSetTableAdapters {
+    
+    
+    public partial class CTTPNTTableAdapter {
+    }
+}
