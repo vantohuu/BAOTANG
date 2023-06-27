@@ -20,30 +20,29 @@ namespace QLVT
             InitializeComponent();
         }
 
-        private int KetNoi_CSDLGOC()
-        {
-            if (conn_publisher != null & conn_publisher.State == ConnectionState.Open)
-            {
-                conn_publisher.Close();
-            }
+        //private int KetNoi_CSDLGOC()
+        //{
+        //    if (conn_publisher != null & conn_publisher.State == ConnectionState.Open)
+        //    {
+        //        conn_publisher.Close();
+        //    }
              
-            try
-            {
-                conn_publisher.ConnectionString = Program.connstr_publisher;
-                conn_publisher.Open();
-                return 1;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi kết nối về cơ sở dữ liệu gốc. " +
-                    "Bạn xem lại Ten Server của Publisher, và tên CSDL trong chuỗi kết nối."
-                    + ex.Message);
-                return 0;
-            }
-        }
+        //    try
+        //    {
+        //        conn_publisher.ConnectionString = Program.connstr_publisher;
+        //        conn_publisher.Open();
+        //        return 1;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Lỗi kết nối về cơ sở dữ liệu gốc. " +
+        //            "Bạn xem lại Ten Server của Publisher, và tên CSDL trong chuỗi kết nối."
+        //            + ex.Message);
+        //        return 0;
+        //    }
+        //}
         private void FormDangNhap_Load(object sender, EventArgs e)
         {
-            if (KetNoi_CSDLGOC() == 0) return;
       
         }
 

@@ -144,6 +144,12 @@
     <Compile Include="FormTacPhamNgheThuat.Designer.cs">
       <DependentUpon>FormTacPhamNgheThuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaoTaiKhoan.Designer.cs">
+      <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,12 @@
     </Compile>
     <Compile Include="FormTrienLam.Designer.cs">
       <DependentUpon>FormTrienLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXoaTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXoaTaiKhoan.Designer.cs">
+      <DependentUpon>FormXoaTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormXuatXu.cs">
       <SubType>Form</SubType>
@@ -221,11 +233,17 @@
     <EmbeddedResource Include="FormTacPhamNgheThuat.resx">
       <DependentUpon>FormTacPhamNgheThuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTaoTaiKhoan.resx">
+      <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTG.resx">
       <DependentUpon>FormTG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTrienLam.resx">
       <DependentUpon>FormTrienLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXoaTaiKhoan.resx">
+      <DependentUpon>FormXoaTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXuatXu.resx">
       <DependentUpon>FormXuatXu.cs</DependentUpon>
@@ -334,6 +352,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bo_audit_changehistory1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_user.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_mydetails.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

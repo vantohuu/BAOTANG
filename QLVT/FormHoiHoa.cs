@@ -26,6 +26,8 @@ namespace QLVT
 
         private void FormHoiHoa_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'BAOTANGDS.TPNT' table. You can move, or remove it, as needed.
+            this.tPNTTableAdapter.Fill(this.BAOTANGDS.TPNT);
             //BAOTANGDS.EnforceConstraints = false;
             //this.hOIHOATableAdapter.Connection.ConnectionString = Program.connstr; this.hOIHOATableAdapter.Fill(this.BAOTANGDS.HOIHOA);
             //this.hOIHOATableAdapter.Connection.ConnectionString = Program.connstr; this.hOIHOATableAdapter.Fill(this.BAOTANGDS.HOIHOA);

@@ -73,6 +73,16 @@ namespace QLVT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage actions_user {
+            get {
+                object obj = ResourceManager.GetObject("actions_user", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage alignhorizontalbottom {
             get {
                 object obj = ResourceManager.GetObject("alignhorizontalbottom", resourceCulture);
@@ -166,6 +176,16 @@ namespace QLVT.Properties {
         internal static DevExpress.Utils.Svg.SvgImage bo_invoice {
             get {
                 object obj = ResourceManager.GetObject("bo_invoice", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage bo_mydetails {
+            get {
+                object obj = ResourceManager.GetObject("bo_mydetails", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }

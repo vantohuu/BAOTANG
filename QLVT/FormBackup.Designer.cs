@@ -215,6 +215,7 @@
             this.ClientSize = new System.Drawing.Size(1058, 601);
             this.Controls.Add(this.panel1);
             this.Name = "FormBackup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Backup";
             this.Load += new System.EventHandler(this.FormBackup_Load);
             this.panel1.ResumeLayout(false);

@@ -32,6 +32,8 @@ namespace QLVT
 
         private void FormDiMuon_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'BAOTANGDS.TPNT' table. You can move, or remove it, as needed.
+            this.tPNTTableAdapter.Fill(this.BAOTANGDS.TPNT);
             BAOTANGDS.EnforceConstraints = false;
             this.tTBOSUUTAPTableAdapter.Connection.ConnectionString = Program.connstr;
             this.tTBOSUUTAPTableAdapter.Fill(this.BAOTANGDS.TTBOSUUTAP);           

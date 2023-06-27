@@ -593,6 +593,7 @@
             this.colMASO.FieldName = "MASO";
             this.colMASO.MinWidth = 25;
             this.colMASO.Name = "colMASO";
+            this.colMASO.OptionsColumn.ReadOnly = true;
             this.colMASO.Visible = true;
             this.colMASO.VisibleIndex = 0;
             this.colMASO.Width = 94;
@@ -603,6 +604,7 @@
             this.colNAMST.FieldName = "NAMST";
             this.colNAMST.MinWidth = 25;
             this.colNAMST.Name = "colNAMST";
+            this.colNAMST.OptionsColumn.ReadOnly = true;
             this.colNAMST.Visible = true;
             this.colNAMST.VisibleIndex = 1;
             this.colNAMST.Width = 94;
@@ -613,6 +615,7 @@
             this.colCHUDE.FieldName = "CHUDE";
             this.colCHUDE.MinWidth = 25;
             this.colCHUDE.Name = "colCHUDE";
+            this.colCHUDE.OptionsColumn.ReadOnly = true;
             this.colCHUDE.Visible = true;
             this.colCHUDE.VisibleIndex = 2;
             this.colCHUDE.Width = 94;
@@ -623,6 +626,7 @@
             this.colLOIDIENGIAI.FieldName = "LOIDIENGIAI";
             this.colLOIDIENGIAI.MinWidth = 25;
             this.colLOIDIENGIAI.Name = "colLOIDIENGIAI";
+            this.colLOIDIENGIAI.OptionsColumn.ReadOnly = true;
             this.colLOIDIENGIAI.Visible = true;
             this.colLOIDIENGIAI.VisibleIndex = 3;
             this.colLOIDIENGIAI.Width = 94;
@@ -633,6 +637,7 @@
             this.colTENTG.FieldName = "TENTG";
             this.colTENTG.MinWidth = 25;
             this.colTENTG.Name = "colTENTG";
+            this.colTENTG.OptionsColumn.ReadOnly = true;
             this.colTENTG.Visible = true;
             this.colTENTG.VisibleIndex = 4;
             this.colTENTG.Width = 94;
@@ -643,6 +648,7 @@
             this.colIDXX.FieldName = "IDXX";
             this.colIDXX.MinWidth = 25;
             this.colIDXX.Name = "colIDXX";
+            this.colIDXX.OptionsColumn.ReadOnly = true;
             this.colIDXX.Visible = true;
             this.colIDXX.VisibleIndex = 5;
             this.colIDXX.Width = 94;

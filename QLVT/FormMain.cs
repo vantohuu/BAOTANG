@@ -54,7 +54,7 @@ namespace QLVT
         public void HienThiMenu()
         {
             HOTEN.Text = "Tài khoản: " + Program.mHoTen;
-            NHOM.Text = "Quền: " + Program.mGroup;
+            NHOM.Text = "Quyền: " + Program.mGroup;
             // Phân quyền
             ribbonPageNhapXuat.Visible = true;
             barButtonItemDangXuat.Enabled = true;
@@ -64,6 +64,8 @@ namespace QLVT
                 btn_backup.Enabled = false;
                 btn_restore.Enabled = false;
                 ribbonPageBaoCao.Visible  = false;
+                btnTTK.Enabled = false;
+                btnXTK.Enabled = false;
 
             }
             else
@@ -71,6 +73,8 @@ namespace QLVT
                 ribbonPageBaoCao.Visible = true;
                 btn_backup.Enabled = true;
                 btn_restore.Enabled = true;
+                btnTTK.Enabled = true;
+                btnXTK.Enabled = true;
             }
         }
 
@@ -98,7 +102,6 @@ namespace QLVT
             foreach (Form f in this.MdiChildren)
             {
                 f.Close();
-                f.Dispose();
             }
             HOTEN.Text = "HOTEN";
             NHOM.Text = "NHOM";
@@ -241,6 +244,34 @@ namespace QLVT
                 else
                 {
                     FormRestore f = new FormRestore();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void barButtonItem10_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormTaoTaiKhoan));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormTaoTaiKhoan f = new FormTaoTaiKhoan();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormXoaTaiKhoan));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormXoaTaiKhoan f = new FormXoaTaiKhoan();
                     f.MdiParent = this;
                     f.Show();
                 }

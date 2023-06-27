@@ -56,6 +56,8 @@
             this.rp_tpnt = new DevExpress.XtraBars.BarButtonItem();
             this.rp_trienlam = new DevExpress.XtraBars.BarButtonItem();
             this.btn_restore = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTTK = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXTK = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageNhapXuat = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -66,6 +68,7 @@
             this.ribbonPageHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.strip = new System.Windows.Forms.StatusStrip();
             this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
@@ -120,10 +123,12 @@
             this.rp_tacgia,
             this.rp_tpnt,
             this.rp_trienlam,
-            this.btn_restore});
+            this.btn_restore,
+            this.btnTTK,
+            this.btnXTK});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
-            this.ribbonControl1.MaxItemId = 53;
+            this.ribbonControl1.MaxItemId = 55;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 601;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -322,6 +327,24 @@
             this.btn_restore.Name = "btn_restore";
             this.btn_restore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_restore_ItemClick);
             // 
+            // btnTTK
+            // 
+            this.btnTTK.Caption = "Tạo tài khoản";
+            this.btnTTK.Enabled = false;
+            this.btnTTK.Id = 53;
+            this.btnTTK.ImageOptions.SvgImage = global::QLVT.Properties.Resources.actions_user;
+            this.btnTTK.Name = "btnTTK";
+            this.btnTTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick_1);
+            // 
+            // btnXTK
+            // 
+            this.btnXTK.Caption = "Xóa tài khoản";
+            this.btnXTK.Enabled = false;
+            this.btnXTK.Id = 54;
+            this.btnXTK.ImageOptions.SvgImage = global::QLVT.Properties.Resources.bo_mydetails;
+            this.btnXTK.Name = "btnXTK";
+            this.btnXTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            // 
             // ribbonPageNhapXuat
             // 
             this.ribbonPageNhapXuat.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -374,7 +397,8 @@
             // 
             this.ribbonPageHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3,
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup1});
             this.ribbonPageHeThong.Name = "ribbonPageHeThong";
             this.ribbonPageHeThong.Text = "HỆ THỐNG";
             // 
@@ -389,6 +413,12 @@
             this.ribbonPageGroup4.ItemLinks.Add(this.btn_backup);
             this.ribbonPageGroup4.ItemLinks.Add(this.btn_restore);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnTTK);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnXTK);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // repositoryItemPictureEdit1
             // 
@@ -545,6 +575,9 @@
         private DevExpress.XtraBars.BarButtonItem rp_tpnt;
         private DevExpress.XtraBars.BarButtonItem rp_trienlam;
         private DevExpress.XtraBars.BarButtonItem btn_restore;
+        private DevExpress.XtraBars.BarButtonItem btnTTK;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarButtonItem btnXTK;
     }
 }
 

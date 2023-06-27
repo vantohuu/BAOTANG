@@ -25,6 +25,8 @@ namespace QLVT
 
         private void FormSoHuu_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'BAOTANGDS.TPNT' table. You can move, or remove it, as needed.
+            this.tPNTTableAdapter.Fill(this.BAOTANGDS.TPNT);
             // TODO: This line of code loads data into the 'bAOTANGDataSet.SOHUU' table. You can move, or remove it, as needed.
             BAOTANGDS.EnforceConstraints = false;
         }

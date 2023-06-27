@@ -75,21 +75,21 @@ namespace QLVT
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            if (CBLH.SelectedIndex == 0)
-            {
-                formDieuKhacTacTuong.ShowDialog();
-            }
-            if (CBLH.SelectedIndex == 1)
-            {
-                formHoiHoa.ShowDialog();
-            }
-            if (CBLH.SelectedIndex == 2)
-            {
-                formLoaiHinhKhac.ShowDialog();
-            }
-        }
+        //private void simpleButton1_Click(object sender, EventArgs e)
+        //{
+        //    if (CBLH.SelectedIndex == 0)
+        //    {
+        //        formDieuKhacTacTuong.ShowDialog();
+        //    }
+        //    if (CBLH.SelectedIndex == 1)
+        //    {
+        //        formHoiHoa.ShowDialog();
+        //    }
+        //    if (CBLH.SelectedIndex == 2)
+        //    {
+        //        formLoaiHinhKhac.ShowDialog();
+        //    }
+        //}
 
         private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
         {
@@ -121,34 +121,34 @@ namespace QLVT
 
        
 
-        private void simpleButton1_Click_2(object sender, EventArgs e)
-        {
-            if (CBLH.SelectedIndex == 0)
-            {
-                formDieuKhacTacTuong.ShowDialog();
-            }
-            if (CBLH.SelectedIndex == 1)
-            {
-                formHoiHoa.ShowDialog();
-            }
-            if (CBLH.SelectedIndex == 2)
-            {
-                formLoaiHinhKhac.ShowDialog();
-            }
-        }
+        //private void simpleButton1_Click_2(object sender, EventArgs e)
+        //{
+        //    if (CBLH.SelectedIndex == 0)
+        //    {
+        //        formDieuKhacTacTuong.ShowDialog();
+        //    }
+        //    if (CBLH.SelectedIndex == 1)
+        //    {
+        //        formHoiHoa.ShowDialog();
+        //    }
+        //    if (CBLH.SelectedIndex == 2)
+        //    {
+        //        formLoaiHinhKhac.ShowDialog();
+        //    }
+        //}
 
-        private void simpleButton2_Click_1(object sender, EventArgs e)
-        {
+        //private void simpleButton2_Click_1(object sender, EventArgs e)
+        //{
 
-            if (CBLSH.SelectedIndex == 0)
-            {
-                formSoHuu.ShowDialog();
-            }
-            if (CBLSH.SelectedIndex == 1)
-            {
-                formDiMuon.ShowDialog();
-            }
-        }
+        //    if (CBLSH.SelectedIndex == 0)
+        //    {
+        //        formSoHuu.ShowDialog();
+        //    }
+        //    if (CBLSH.SelectedIndex == 1)
+        //    {
+        //        formDiMuon.ShowDialog();
+        //    }
+        //}
 
         
 

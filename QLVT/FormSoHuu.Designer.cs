@@ -43,6 +43,9 @@
             this.MASOSH = new DevExpress.XtraEditors.TextEdit();
             this.sOHUUTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.SOHUUTableAdapter();
             this.tableAdapterManager = new QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager();
+            this.tPNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tPNTTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.TPNTTableAdapter();
+            this.sOHUUBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             mASOLabel = new System.Windows.Forms.Label();
             nGAYSOHUULabel = new System.Windows.Forms.Label();
             tINHTRANGLabel = new System.Windows.Forms.Label();
@@ -55,6 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NGAYSH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NGAYSH.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASOSH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sOHUUBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // mASOLabel
@@ -107,7 +112,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 344);
+            this.panel1.Size = new System.Drawing.Size(393, 333);
             this.panel1.TabIndex = 0;
             // 
             // OK
@@ -197,12 +202,26 @@
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
             // 
+            // tPNTBindingSource
+            // 
+            this.tPNTBindingSource.DataMember = "TPNT";
+            this.tPNTBindingSource.DataSource = this.BAOTANGDS;
+            // 
+            // tPNTTableAdapter
+            // 
+            this.tPNTTableAdapter.ClearBeforeFill = true;
+            // 
+            // sOHUUBindingSource1
+            // 
+            this.sOHUUBindingSource1.DataMember = "FK_TPNT_SOHUU";
+            this.sOHUUBindingSource1.DataSource = this.tPNTBindingSource;
+            // 
             // FormSoHuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(398, 344);
+            this.ClientSize = new System.Drawing.Size(393, 333);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -219,6 +238,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.NGAYSH.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NGAYSH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASOSH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sOHUUBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,5 +256,8 @@
         private DevExpress.XtraEditors.TextEdit TINHTRANGSH;
         private DevExpress.XtraEditors.TextEdit TRIGIASH;
         private System.Windows.Forms.Button OK;
+        private System.Windows.Forms.BindingSource tPNTBindingSource;
+        private BAOTANGDataSetTableAdapters.TPNTTableAdapter tPNTTableAdapter;
+        private System.Windows.Forms.BindingSource sOHUUBindingSource1;
     }
 }

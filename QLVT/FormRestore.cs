@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -44,35 +45,52 @@ namespace QLVT
 
         private void RESTORE_Click(object sender, EventArgs e)
         {
-            string path = @"D:\STUDY\HK6\TTCS\baotang.bak";
-            if (!File.Exists(path))
-            {
-                MessageBox.Show("Không tìm thấy file backup với đường dẫn D:\\STUDY\\HK6\\TTCS\\baotang.bak","", MessageBoxButtons.OK);
-                return;
-            }
+          
             if (MessageBox.Show("Nếu thành công app sẽ tắt. Bạn có thực sự muốn RESTORE không!", "Xác nhận", MessageBoxButtons.OKCancel)
                  == DialogResult.OK)
             {
-                try
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Backup file (*.bak)|*.bak|All file (*.*)|*.*";
+                openFileDialog.InitialDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName + "\\backup";
+                bool exists = System.IO.Directory.Exists(openFileDialog.InitialDirectory);
+                if (!exists)
+                    System.IO.Directory.CreateDirectory(openFileDialog.InitialDirectory);
+                openFileDialog.Title = "Open Backuping File";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    this.Enabled = false;
-                    String query = "exec sp_Restore";
-                    Program.ExecSqlNonQuery(query);
-                    MessageBox.Show("Restore thành công. XONG! ", "", MessageBoxButtons.OK);
-                    this.RSTA.Fill(this.BAOTANGDS.RESTORE);
-                    DataRowView dt = ((DataRowView)RSBS[0]);
-                    String restore_date = dt["restore_date"].ToString();
-                    Console.WriteLine(restore_date);
-                    labelLS.Text = "(Lịch sử gần nhất:" + restore_date + ")";
-                    Application.Exit();
-                    this.Enabled = true;
+                    Console.WriteLine(openFileDialog.FileName);
+
+                    if (Regex.IsMatch(openFileDialog.FileName, @".bak$") == false)
+                    {
+                        MessageBox.Show("Tên file backup phải có đuôi .bak", "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
+                    try
+                    {
+                        this.Enabled = false;
+                        String query = "USE [master] " +
+                            " ALTER DATABASE [BAOTANG]  SET OFFLINE WITH ROLLBACK IMMEDIATE " +
+                            " RESTORE DATABASE [BAOTANG] FROM DISK =  '"+ openFileDialog.FileName + "'WITH REPLACE" +
+                            " ALTER DATABASE [BAOTANG]  SET ONLINE";
+                        Program.ExecSqlNonQuery(query);
+                        MessageBox.Show("Restore thành công. XONG! Vui lòng chạy lại ứng dụng.", "", MessageBoxButtons.OK);
+                        this.RSTA.Fill(this.BAOTANGDS.RESTORE);
+                        DataRowView dt = ((DataRowView)RSBS[0]);
+                        String restore_date = dt["restore_date"].ToString();
+                        Console.WriteLine(restore_date);
+                        labelLS.Text = "(Lịch sử gần nhất:" + restore_date + ")";
+                        Application.Exit();
+                        this.Enabled = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        this.Enabled = true;
+                        MessageBox.Show("Lỗi restore. \n" + ex.Message, "", MessageBoxButtons.OK);
+                        return;
+                    }
                 }
-                catch (Exception ex)
-                {
-                    this.Enabled = true;
-                    MessageBox.Show("Lỗi restore. \n" + ex.Message, "", MessageBoxButtons.OK);
-                    return;
-                }
+
+               
             }
         }
     }

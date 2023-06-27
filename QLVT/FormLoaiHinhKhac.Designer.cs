@@ -41,6 +41,9 @@
             this.MASOLHK = new DevExpress.XtraEditors.TextEdit();
             this.lOAIHINHKHACTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.LOAIHINHKHACTableAdapter();
             this.tableAdapterManager = new QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager();
+            this.tPNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tPNTTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.TPNTTableAdapter();
+            this.lOAIHINHKHACBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             pHONGCACHLabel = new System.Windows.Forms.Label();
             tHELOAILabel = new System.Windows.Forms.Label();
             mASOLabel = new System.Windows.Forms.Label();
@@ -50,6 +53,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.THELOAILHK.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASOLHK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOAIHINHKHACBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pHONGCACHLabel
@@ -91,7 +96,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 271);
+            this.panel1.Size = new System.Drawing.Size(403, 273);
             this.panel1.TabIndex = 0;
             // 
             // OK
@@ -168,11 +173,25 @@
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
             // 
+            // tPNTBindingSource
+            // 
+            this.tPNTBindingSource.DataMember = "TPNT";
+            this.tPNTBindingSource.DataSource = this.BAOTANGDS;
+            // 
+            // tPNTTableAdapter
+            // 
+            this.tPNTTableAdapter.ClearBeforeFill = true;
+            // 
+            // lOAIHINHKHACBindingSource1
+            // 
+            this.lOAIHINHKHACBindingSource1.DataMember = "FK_LOAIHINHKHAC_TPNT";
+            this.lOAIHINHKHACBindingSource1.DataSource = this.tPNTBindingSource;
+            // 
             // FormLoaiHinhKhac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 271);
+            this.ClientSize = new System.Drawing.Size(403, 273);
             this.Controls.Add(this.panel1);
             this.Name = "FormLoaiHinhKhac";
             this.Text = "Loại hình khác";
@@ -185,6 +204,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.THELOAILHK.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASOLHK.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOAIHINHKHACBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,5 +221,8 @@
         private DevExpress.XtraEditors.TextEdit MASOLHK;
         private BAOTANGDataSetTableAdapters.LOAIHINHKHACTableAdapter lOAIHINHKHACTableAdapter;
         private BAOTANGDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource tPNTBindingSource;
+        private BAOTANGDataSetTableAdapters.TPNTTableAdapter tPNTTableAdapter;
+        private System.Windows.Forms.BindingSource lOAIHINHKHACBindingSource1;
     }
 }

@@ -13,15 +13,12 @@ namespace QLVT
     {
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source= HP;Initial Catalog= BAOTANG; Integrated Security = True";     
         public static SqlDataAdapter da;
         public static SqlDataReader myReader;
         public static String servername = "HP";
         public static String username = "";
         public static String password = "";
         public static String database = "BAOTANG";
-        public static String remotelogin = "htkn";
-        public static String remotepassword = "123456";
         public static String mloginDN = "";
         public static String passworDN = "";
         public static String mHoTen = "";
@@ -103,13 +100,13 @@ namespace QLVT
                 return ex.State;
             }
         }
-        public static void SetEnableOfButton(Form frm, Boolean Active)
-        {
+        //public static void SetEnableOfButton(Form frm, Boolean Active)
+        //{
 
-            foreach (Control ctl in frm.Controls)
-                if ((ctl) is Button)
-                    ctl.Enabled = Active;
-        }
+        //    foreach (Control ctl in frm.Controls)
+        //        if ((ctl) is Button)
+        //            ctl.Enabled = Active;
+        //}
 
 
         [STAThread]

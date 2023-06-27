@@ -47,6 +47,8 @@
             this.dimuonTA = new QLVT.BAOTANGDataSetTableAdapters.DIMUONTableAdapter();
             this.tableAdapterManager = new QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager();
             this.tTBOSUUTAPTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.TTBOSUUTAPTableAdapter();
+            this.tPNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tPNTTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.TPNTTableAdapter();
             nGAYTRALabel = new System.Windows.Forms.Label();
             nGAYMUONLabel = new System.Windows.Forms.Label();
             tENBSTLabel = new System.Windows.Forms.Label();
@@ -62,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NGAYMUONDM.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASODM.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tTBOSUUTAPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nGAYTRALabel
@@ -125,7 +128,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 276);
+            this.panel1.Size = new System.Drawing.Size(373, 278);
             this.panel1.TabIndex = 0;
             // 
             // MASO
@@ -246,11 +249,20 @@
             // 
             this.tTBOSUUTAPTableAdapter.ClearBeforeFill = true;
             // 
+            // tPNTBindingSource
+            // 
+            this.tPNTBindingSource.DataMember = "TPNT";
+            this.tPNTBindingSource.DataSource = this.BAOTANGDS;
+            // 
+            // tPNTTableAdapter
+            // 
+            this.tPNTTableAdapter.ClearBeforeFill = true;
+            // 
             // FormDiMuon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 276);
+            this.ClientSize = new System.Drawing.Size(373, 278);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -269,6 +281,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NGAYMUONDM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASODM.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tTBOSUUTAPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,5 +301,7 @@
         public System.Windows.Forms.BindingSource dimuonBS;
         public BAOTANGDataSetTableAdapters.DIMUONTableAdapter dimuonTA;
         private DevExpress.XtraEditors.TextEdit MASO;
+        private System.Windows.Forms.BindingSource tPNTBindingSource;
+        private BAOTANGDataSetTableAdapters.TPNTTableAdapter tPNTTableAdapter;
     }
 }

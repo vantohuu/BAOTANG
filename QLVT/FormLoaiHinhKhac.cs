@@ -33,6 +33,8 @@ namespace QLVT
 
         private void FormLoaiHinhKhac_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'BAOTANGDS.TPNT' table. You can move, or remove it, as needed.
+            this.tPNTTableAdapter.Fill(this.BAOTANGDS.TPNT);
             // TODO: This line of code loads data into the 'bAOTANGDataSet.LOAIHINHKHAC' table. You can move, or remove it, as needed.
             //BAOTANGDS.EnforceConstraints = false;
             //this.lOAIHINHKHACTableAdapter.Connection.ConnectionString = Program.connstr; 

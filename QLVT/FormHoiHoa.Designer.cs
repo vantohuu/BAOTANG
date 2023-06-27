@@ -43,6 +43,9 @@
             this.OK = new DevExpress.XtraEditors.SimpleButton();
             this.hOIHOATableAdapter = new QLVT.BAOTANGDataSetTableAdapters.HOIHOATableAdapter();
             this.tableAdapterManager = new QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager();
+            this.tPNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tPNTTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.TPNTTableAdapter();
+            this.hOIHOABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             tRUONGPHAILabel = new System.Windows.Forms.Label();
             vATLIEULabel = new System.Windows.Forms.Label();
             cHATLIEULabel = new System.Windows.Forms.Label();
@@ -54,6 +57,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.VATLIEUHH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHATLIEUHH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASOHH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOIHOABindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tRUONGPHAILabel
@@ -106,7 +111,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 333);
+            this.panel1.Size = new System.Drawing.Size(340, 333);
             this.panel1.TabIndex = 0;
             // 
             // TRUONGPHAIHH
@@ -192,11 +197,25 @@
             this.tableAdapterManager.UpdateOrder = QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATXUTableAdapter = null;
             // 
+            // tPNTBindingSource
+            // 
+            this.tPNTBindingSource.DataMember = "TPNT";
+            this.tPNTBindingSource.DataSource = this.BAOTANGDS;
+            // 
+            // tPNTTableAdapter
+            // 
+            this.tPNTTableAdapter.ClearBeforeFill = true;
+            // 
+            // hOIHOABindingSource1
+            // 
+            this.hOIHOABindingSource1.DataMember = "TPNT_HOIHOA";
+            this.hOIHOABindingSource1.DataSource = this.tPNTBindingSource;
+            // 
             // FormHoiHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 333);
+            this.ClientSize = new System.Drawing.Size(340, 333);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -212,6 +231,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.VATLIEUHH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CHATLIEUHH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MASOHH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hOIHOABindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -228,5 +249,8 @@
         private DevExpress.XtraEditors.SimpleButton OK;
         private BAOTANGDataSetTableAdapters.HOIHOATableAdapter hOIHOATableAdapter;
         private BAOTANGDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource tPNTBindingSource;
+        private BAOTANGDataSetTableAdapters.TPNTTableAdapter tPNTTableAdapter;
+        private System.Windows.Forms.BindingSource hOIHOABindingSource1;
     }
 }

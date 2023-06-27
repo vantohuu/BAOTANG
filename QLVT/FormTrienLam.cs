@@ -478,7 +478,7 @@ namespace QLVT
 
                 string query = stack2.Pop();
                 Program.ExecSqlNonQuery(query);
-
+                 
                 this.cttrienlamTA.Fill(this.BAOTANGDS.CT_TRIENLAM);
 
                 btnThemTL.Enabled = btnXoaTL.Enabled = btnSuaTL.Enabled = btnReloadTL.Enabled 
