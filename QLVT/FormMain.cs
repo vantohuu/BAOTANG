@@ -111,12 +111,12 @@ namespace QLVT
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-                DangXuat();
-                ribbonPageBaoCao.Visible = ribbonPageNhapXuat.Visible = false;
-                barButtonItemDangXuat.Enabled = btn_backup.Enabled= btn_restore.Enabled = false;
-                barButtonItemDangNhap.Enabled = true;
-
-     
+            DangXuat();
+            ribbonPageBaoCao.Visible = ribbonPageNhapXuat.Visible = false;
+            barButtonItemDangXuat.Enabled = btn_backup.Enabled= btn_restore.Enabled = false;
+            barButtonItemDangNhap.Enabled = true;
+            btnTTK.Enabled = false;
+            btnXTK.Enabled = false;
         }
 
         private void strip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

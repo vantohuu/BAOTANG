@@ -108,12 +108,10 @@ namespace QLVT
             if (diMuonDB.Count > 0)
 
             {
-                MessageBox.Show("Không thể xóa tác giả này vì tồn tại trong tác phẩm nghệ thuật!", "", MessageBoxButtons.OK);
-
+                MessageBox.Show("Không thể xóa bộ sưu tập này vì tồn tại trong tác phẩm nghệ thuật!", "", MessageBoxButtons.OK);
                 return;
-
             }
-            if (MessageBox.Show("Bạn có thực sự muốn xóa nhân viên này!", "Xác nhận", MessageBoxButtons.OKCancel)
+            if (MessageBox.Show("Bạn có thực sự muốn xóa bộ sưu tập này này!", "Xác nhận", MessageBoxButtons.OKCancel)
                == DialogResult.OK)
             {
                 try
@@ -156,7 +154,7 @@ namespace QLVT
                 TEN.Focus();
                 return;
             }
-            if (Regex.IsMatch(TEN.Text, @"^[a-zA-Z ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
+            if (Regex.IsMatch(TEN.Text, @"^[0-9a-zA-Z ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
             {
                 MessageBox.Show("Tên chỉ có chữ cái và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
                 TEN.Focus();
@@ -193,9 +191,9 @@ namespace QLVT
                 DIACHI.Focus();
                 return;
             }
-            if (Regex.IsMatch(DIACHI.Text, @"^[a-zA-Z \-/,.ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
+            if (Regex.IsMatch(DIACHI.Text, @"^[a-zA-Z0-9 \-/,.ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
             {
-                MessageBox.Show("Địa chỉ chỉ có chữ cái và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Địa chỉ chỉ có chữ cái chữ số khoảng trắng và các kí tự ,\\-.,/", "Thông báo", MessageBoxButtons.OK);
                 DIACHI.Focus();
                 return;
             }

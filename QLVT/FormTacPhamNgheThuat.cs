@@ -43,6 +43,8 @@ namespace QLVT
         }
         private void FormTacPhamNgheThuat_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'BAOTANGDS.CT_TRIENLAM' table. You can move, or remove it, as needed.
+            this.cT_TRIENLAMTableAdapter.Fill(this.BAOTANGDS.CT_TRIENLAM);
             // TODO: This line of code loads data into the 'BAOTANGDS.CTTPNT' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'BAOTANGDS.DIMUON' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'BAOTANGDS.TTXUATXU' table. You can move, or remove it, as needed.
@@ -196,6 +198,14 @@ namespace QLVT
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
+            if (cttlBS.Count > 0)
+
+            {
+                MessageBox.Show("Không thể xóa tác phẩm này vì tồn tại trong triển lãm!", "", MessageBoxButtons.OK);
+                return;
+
+            }
             if (MessageBox.Show("Bạn có thực sự muốn xóa tác phẩm này!", "Xác nhận", MessageBoxButtons.OKCancel)
                == DialogResult.OK)
             {

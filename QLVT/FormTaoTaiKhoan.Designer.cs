@@ -30,13 +30,13 @@
         {
             System.Windows.Forms.Label label3;
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonTao = new System.Windows.Forms.Button();
             this.password = new DevExpress.XtraEditors.TextEdit();
             this.username = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox = new System.Windows.Forms.ComboBox();
             label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.password.Properties)).BeginInit();
@@ -70,6 +70,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // comboBox
+            // 
+            this.comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Location = new System.Drawing.Point(375, 205);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(229, 24);
+            this.comboBox.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(239, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Quyền:";
             // 
             // label2
             // 
@@ -121,25 +141,6 @@
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(229, 22);
             this.username.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(239, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Quyền:";
-            // 
-            // comboBox
-            // 
-            this.comboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(375, 205);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(229, 24);
-            this.comboBox.TabIndex = 12;
             // 
             // FormTaoTaiKhoan
             // 

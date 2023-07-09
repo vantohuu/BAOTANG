@@ -175,7 +175,7 @@
             label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label6.Location = new System.Drawing.Point(582, 11);
+            label6.Location = new System.Drawing.Point(687, 11);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(102, 25);
             label6.TabIndex = 4;
@@ -376,7 +376,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1202, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1413, 30);
             this.barDockControlRight.Manager = null;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 646);
@@ -388,7 +388,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 82);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1202, 594);
+            this.panel1.Size = new System.Drawing.Size(1413, 594);
             this.panel1.TabIndex = 23;
             // 
             // panel4
@@ -399,7 +399,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 249);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1202, 345);
+            this.panel4.Size = new System.Drawing.Size(1413, 345);
             this.panel4.TabIndex = 1;
             // 
             // panelHieuChinh
@@ -410,7 +410,7 @@
             this.panelHieuChinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHieuChinh.Location = new System.Drawing.Point(604, 0);
             this.panelHieuChinh.Name = "panelHieuChinh";
-            this.panelHieuChinh.Size = new System.Drawing.Size(598, 345);
+            this.panelHieuChinh.Size = new System.Drawing.Size(809, 345);
             this.panelHieuChinh.TabIndex = 1;
             // 
             // panelHCTL
@@ -426,7 +426,7 @@
             this.panelHCTL.Enabled = false;
             this.panelHCTL.Location = new System.Drawing.Point(6, 6);
             this.panelHCTL.Name = "panelHCTL";
-            this.panelHCTL.Size = new System.Drawing.Size(589, 218);
+            this.panelHCTL.Size = new System.Drawing.Size(779, 218);
             this.panelHCTL.TabIndex = 9;
             // 
             // NGAYKETTHUC
@@ -573,7 +573,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlTop.Size = new System.Drawing.Size(1202, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1413, 30);
             // 
             // barDockControlBottom
             // 
@@ -582,7 +582,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 676);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1202, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1413, 0);
             // 
             // barDockControlLeft
             // 
@@ -597,7 +597,7 @@
             // 
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl1.Location = new System.Drawing.Point(1202, 30);
+            this.barDockControl1.Location = new System.Drawing.Point(1413, 30);
             this.barDockControl1.Manager = this.barManager1;
             this.barDockControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.barDockControl1.Size = new System.Drawing.Size(0, 646);
@@ -622,7 +622,7 @@
             this.TEN.Location = new System.Drawing.Point(437, 39);
             this.TEN.MenuManager = this.barManager1;
             this.TEN.Name = "TEN";
-            this.TEN.Size = new System.Drawing.Size(125, 22);
+            this.TEN.Size = new System.Drawing.Size(316, 22);
             this.TEN.TabIndex = 19;
             // 
             // ID
@@ -752,7 +752,7 @@
             this.trienlamGridControl.MainView = this.gridView1;
             this.trienlamGridControl.MenuManager = this.barManager1;
             this.trienlamGridControl.Name = "trienlamGridControl";
-            this.trienlamGridControl.Size = new System.Drawing.Size(1202, 249);
+            this.trienlamGridControl.Size = new System.Drawing.Size(1413, 249);
             this.trienlamGridControl.TabIndex = 0;
             this.trienlamGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -815,7 +815,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 30);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1202, 52);
+            this.panel5.Size = new System.Drawing.Size(1413, 52);
             this.panel5.TabIndex = 22;
             // 
             // trienlamTA
@@ -870,7 +870,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1202, 676);
+            this.ClientSize = new System.Drawing.Size(1413, 676);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.barDockControlRight);

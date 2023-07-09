@@ -64,7 +64,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cTLOAIHINHLabel1 = new System.Windows.Forms.Label();
             this.cttpntBS = new System.Windows.Forms.BindingSource(this.components);
+            this.cTLOAISOHUULabel1 = new System.Windows.Forms.Label();
+            this.lOAIHINHLabel1 = new System.Windows.Forms.Label();
+            this.lOAISOHUULabel1 = new System.Windows.Forms.Label();
             this.CBXUATXU = new System.Windows.Forms.ComboBox();
             this.xuatxuBS = new System.Windows.Forms.BindingSource(this.components);
             this.CBTAGGIA = new System.Windows.Forms.ComboBox();
@@ -87,10 +91,8 @@
             this.dimuonBS = new System.Windows.Forms.BindingSource(this.components);
             this.dimuonTA = new QLVT.BAOTANGDataSetTableAdapters.DIMUONTableAdapter();
             this.cttpntTA = new QLVT.BAOTANGDataSetTableAdapters.CTTPNTTableAdapter();
-            this.lOAISOHUULabel1 = new System.Windows.Forms.Label();
-            this.lOAIHINHLabel1 = new System.Windows.Forms.Label();
-            this.cTLOAISOHUULabel1 = new System.Windows.Forms.Label();
-            this.cTLOAIHINHLabel1 = new System.Windows.Forms.Label();
+            this.cttlBS = new System.Windows.Forms.BindingSource(this.components);
+            this.cT_TRIENLAMTableAdapter = new QLVT.BAOTANGDataSetTableAdapters.CT_TRIENLAMTableAdapter();
             mASOLabel = new System.Windows.Forms.Label();
             nAMSTLabel = new System.Windows.Forms.Label();
             cHUDELabel = new System.Windows.Forms.Label();
@@ -120,6 +122,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tpntGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dimuonBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cttlBS)).BeginInit();
             this.SuspendLayout();
             // 
             // mASOLabel
@@ -452,10 +455,50 @@
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // cTLOAIHINHLabel1
+            // 
+            this.cTLOAIHINHLabel1.AutoSize = true;
+            this.cTLOAIHINHLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "CTLOAIHINH", true));
+            this.cTLOAIHINHLabel1.Location = new System.Drawing.Point(42, 293);
+            this.cTLOAIHINHLabel1.Name = "cTLOAIHINHLabel1";
+            this.cTLOAIHINHLabel1.Size = new System.Drawing.Size(44, 16);
+            this.cTLOAIHINHLabel1.TabIndex = 24;
+            this.cTLOAIHINHLabel1.Text = "label4";
+            // 
             // cttpntBS
             // 
             this.cttpntBS.DataMember = "TPNT_CTTPNT";
             this.cttpntBS.DataSource = this.tpntBS;
+            // 
+            // cTLOAISOHUULabel1
+            // 
+            this.cTLOAISOHUULabel1.AutoSize = true;
+            this.cTLOAISOHUULabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "CTLOAISOHUU", true));
+            this.cTLOAISOHUULabel1.Location = new System.Drawing.Point(765, 293);
+            this.cTLOAISOHUULabel1.Name = "cTLOAISOHUULabel1";
+            this.cTLOAISOHUULabel1.Size = new System.Drawing.Size(30, 16);
+            this.cTLOAISOHUULabel1.TabIndex = 23;
+            this.cTLOAISOHUULabel1.Text = "abc";
+            // 
+            // lOAIHINHLabel1
+            // 
+            this.lOAIHINHLabel1.AutoSize = true;
+            this.lOAIHINHLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "LOAIHINH", true));
+            this.lOAIHINHLabel1.Location = new System.Drawing.Point(42, 254);
+            this.lOAIHINHLabel1.Name = "lOAIHINHLabel1";
+            this.lOAIHINHLabel1.Size = new System.Drawing.Size(31, 16);
+            this.lOAIHINHLabel1.TabIndex = 22;
+            this.lOAIHINHLabel1.Text = "aaa";
+            // 
+            // lOAISOHUULabel1
+            // 
+            this.lOAISOHUULabel1.AutoSize = true;
+            this.lOAISOHUULabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "LOAISOHUU", true));
+            this.lOAISOHUULabel1.Location = new System.Drawing.Point(765, 254);
+            this.lOAISOHUULabel1.Name = "lOAISOHUULabel1";
+            this.lOAISOHUULabel1.Size = new System.Drawing.Size(31, 16);
+            this.lOAISOHUULabel1.TabIndex = 20;
+            this.lOAISOHUULabel1.Text = "aaa";
             // 
             // CBXUATXU
             // 
@@ -466,7 +509,7 @@
             this.CBXUATXU.FormattingEnabled = true;
             this.CBXUATXU.Location = new System.Drawing.Point(893, 141);
             this.CBXUATXU.Name = "CBXUATXU";
-            this.CBXUATXU.Size = new System.Drawing.Size(132, 24);
+            this.CBXUATXU.Size = new System.Drawing.Size(227, 24);
             this.CBXUATXU.TabIndex = 19;
             this.CBXUATXU.ValueMember = "ID";
             this.CBXUATXU.SelectedIndexChanged += new System.EventHandler(this.CBXUATXU_SelectedIndexChanged);
@@ -684,45 +727,14 @@
             // 
             this.cttpntTA.ClearBeforeFill = true;
             // 
-            // lOAISOHUULabel1
+            // cttlBS
             // 
-            this.lOAISOHUULabel1.AutoSize = true;
-            this.lOAISOHUULabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "LOAISOHUU", true));
-            this.lOAISOHUULabel1.Location = new System.Drawing.Point(765, 254);
-            this.lOAISOHUULabel1.Name = "lOAISOHUULabel1";
-            this.lOAISOHUULabel1.Size = new System.Drawing.Size(31, 16);
-            this.lOAISOHUULabel1.TabIndex = 20;
-            this.lOAISOHUULabel1.Text = "aaa";
+            this.cttlBS.DataMember = "FK_CT_TRIENLAM_TPNT";
+            this.cttlBS.DataSource = this.tpntBS;
             // 
-            // lOAIHINHLabel1
+            // cT_TRIENLAMTableAdapter
             // 
-            this.lOAIHINHLabel1.AutoSize = true;
-            this.lOAIHINHLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "LOAIHINH", true));
-            this.lOAIHINHLabel1.Location = new System.Drawing.Point(42, 254);
-            this.lOAIHINHLabel1.Name = "lOAIHINHLabel1";
-            this.lOAIHINHLabel1.Size = new System.Drawing.Size(31, 16);
-            this.lOAIHINHLabel1.TabIndex = 22;
-            this.lOAIHINHLabel1.Text = "aaa";
-            // 
-            // cTLOAISOHUULabel1
-            // 
-            this.cTLOAISOHUULabel1.AutoSize = true;
-            this.cTLOAISOHUULabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "CTLOAISOHUU", true));
-            this.cTLOAISOHUULabel1.Location = new System.Drawing.Point(765, 293);
-            this.cTLOAISOHUULabel1.Name = "cTLOAISOHUULabel1";
-            this.cTLOAISOHUULabel1.Size = new System.Drawing.Size(30, 16);
-            this.cTLOAISOHUULabel1.TabIndex = 23;
-            this.cTLOAISOHUULabel1.Text = "abc";
-            // 
-            // cTLOAIHINHLabel1
-            // 
-            this.cTLOAIHINHLabel1.AutoSize = true;
-            this.cTLOAIHINHLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cttpntBS, "CTLOAIHINH", true));
-            this.cTLOAIHINHLabel1.Location = new System.Drawing.Point(42, 293);
-            this.cTLOAIHINHLabel1.Name = "cTLOAIHINHLabel1";
-            this.cTLOAIHINHLabel1.Size = new System.Drawing.Size(44, 16);
-            this.cTLOAIHINHLabel1.TabIndex = 24;
-            this.cTLOAIHINHLabel1.Text = "label4";
+            this.cT_TRIENLAMTableAdapter.ClearBeforeFill = true;
             // 
             // FormTacPhamNgheThuat
             // 
@@ -762,6 +774,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tpntGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dimuonBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cttlBS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -821,5 +834,7 @@
         private System.Windows.Forms.Label lOAIHINHLabel1;
         private System.Windows.Forms.Label lOAISOHUULabel1;
         private System.Windows.Forms.Label cTLOAIHINHLabel1;
+        private System.Windows.Forms.BindingSource cttlBS;
+        private BAOTANGDataSetTableAdapters.CT_TRIENLAMTableAdapter cT_TRIENLAMTableAdapter;
     }
 }

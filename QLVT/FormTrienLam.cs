@@ -81,7 +81,7 @@ namespace QLVT
                 panelCT1.Enabled = false;
                 panelCT2.Visible = false;
                 trienlamGridControl.Enabled = true;
-                panel4.Enabled = false;
+                panel4.Enabled = true;
                 panelHCTL.Enabled = false;
                 panelHieuChinh.Enabled = false;
             }
@@ -98,6 +98,7 @@ namespace QLVT
                 check_them = true;
                 panelHieuChinh.Enabled = true;
                 trienlam_btn.Enabled = false;
+                panelCT2.Enabled = false;
                 panelHCTL.Enabled = true;
                 vitri = trienlamBS.Position;
                 trienlamBS.AddNew();
@@ -111,6 +112,7 @@ namespace QLVT
                 panelHieuChinh.Enabled = true;
                 ct_trienlamGridControl.Enabled = false;
                 trienlam_btn.Enabled = false;
+                panelCT2.Enabled = true;
                 panelHCTL.Enabled = false;
                 cttrienlamBS.AddNew();
             }
@@ -141,6 +143,11 @@ namespace QLVT
         {
             if (trienlam_btn.Caption.ToString() == "Chi tiết triển lãm")
             {
+                if (trienlamBS.Count == 0)
+                {
+                    MessageBox.Show("Không có gì để xóa!", "", MessageBoxButtons.OK);
+                    return;
+                }
                 if (cttrienlamBS.Count > 0)
 
                 {
@@ -187,6 +194,11 @@ namespace QLVT
                 if (MessageBox.Show("Bạn có thực sự muốn xóa chi tiết triển lãm này!", "Xác nhận", MessageBoxButtons.OKCancel)
                    == DialogResult.OK)
                 {
+                    if (cttrienlamBS.Count == 0)
+                    {
+                        MessageBox.Show("Không có gì để xóa!", "", MessageBoxButtons.OK);
+                        return;
+                    }
                     try
                     {
                         DataRowView dt = ((DataRowView)cttrienlamBS[cttrienlamBS.Position]);
@@ -415,6 +427,11 @@ namespace QLVT
         {
             if (trienlam_btn.Caption.ToString() == "Chi tiết triển lãm")
             {
+                if (trienlamBS.Count == 0)
+                {
+                    MessageBox.Show("Không có gì để sửa!", "", MessageBoxButtons.OK);
+                    return;
+                }    
                 vitri = trienlamBS.Position;
                 DataRowView dt = ((DataRowView)trienlamBS[trienlamBS.Position]);
                 id = int.Parse(dt["ID"].ToString());
@@ -422,6 +439,7 @@ namespace QLVT
                 ngayketthuc = (DateTime)dt["NGAYKETTHUC"];
                 ten = dt["TEN"].ToString();
                 panelHieuChinh.Enabled = true;
+                panelCT2.Enabled = false;
                 panelHCTL.Enabled = true;
                 btnThemTL.Enabled = btnXoaTL.Enabled = btnSuaTL.Enabled = btnReloadTL.Enabled 
                     = btnThoatTL.Enabled = btnPhucHoiTL.Enabled = false;
@@ -432,11 +450,18 @@ namespace QLVT
             }
             else
             {
+                if (cttrienlamBS.Count == 0)
+                {
+                    MessageBox.Show("Không có gì để sửa!", "", MessageBoxButtons.OK);
+                    return;
+                }
                 vitri = cttrienlamBS.Position;
                 DataRowView dt = ((DataRowView)cttrienlamBS[cttrienlamBS.Position]);
                 matpnt = int.Parse(dt["MATPNT"].ToString());
                 id = int.Parse(dt["ID_TL"].ToString());
                 panelHieuChinh.Enabled = true;
+                panelCT2.Enabled = true;
+                panelHCTL.Enabled = false;
                 btnThemTL.Enabled = btnXoaTL.Enabled = btnSuaTL.Enabled = btnReloadTL.Enabled = btnThoatTL.Enabled
                     = btnPhucHoiTL.Enabled = false;
                 btnGhiTL.Enabled = btnHuyTL.Enabled = true;
