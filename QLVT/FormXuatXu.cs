@@ -68,15 +68,14 @@ namespace QLVT
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (tpntBS.Count > 0)
+            if (tPNTBindingSource.Count > 0)
 
             {
-                MessageBox.Show("Không thể xóa tác giả này vì tồn tại trong tác phẩm nghệ thuật!", "", MessageBoxButtons.OK);
-
+                MessageBox.Show("Không thể xóa xuất xứ này vì tồn tại trong tác phẩm nghệ thuật!", "", MessageBoxButtons.OK);
                 return;
 
             }
-            if (MessageBox.Show("Bạn có thực sự muốn xóa nhân viên này!", "Xác nhận", MessageBoxButtons.OKCancel)
+            if (MessageBox.Show("Bạn có thực sự muốn xóa xuất xứ này!", "Xác nhận", MessageBoxButtons.OKCancel)
                == DialogResult.OK)
             {
                 try

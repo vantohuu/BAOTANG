@@ -36,6 +36,7 @@
             System.Windows.Forms.Label pHONGCACHCHINHLabel;
             System.Windows.Forms.Label dIENGIAILabel;
             System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label nGAYMATLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTG));
             this.tacGiaBS = new System.Windows.Forms.BindingSource(this.components);
             this.BAOTANGDS = new QLVT.BAOTANGDataSet();
@@ -59,6 +60,7 @@
             this.tpntBS = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.NGAYMATT = new DevExpress.XtraEditors.DateEdit();
             this.DIENGIAII = new DevExpress.XtraEditors.TextEdit();
             this.PHONGCACHCHINHH = new DevExpress.XtraEditors.TextEdit();
             this.THOIDAII = new DevExpress.XtraEditors.TextEdit();
@@ -82,12 +84,15 @@
             pHONGCACHCHINHLabel = new System.Windows.Forms.Label();
             dIENGIAILabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
+            nGAYMATLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tacGiaBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BAOTANGDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpntBS)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NGAYMATT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NGAYMATT.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DIENGIAII.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHONGCACHCHINHH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.THOIDAII.Properties)).BeginInit();
@@ -158,12 +163,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label1.Location = new System.Drawing.Point(349, 17);
+            label1.Location = new System.Drawing.Point(532, 17);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(100, 25);
             label1.TabIndex = 3;
             label1.Text = "TÁC GIẢ";
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nGAYMATLabel
+            // 
+            nGAYMATLabel.AutoSize = true;
+            nGAYMATLabel.Location = new System.Drawing.Point(818, 26);
+            nGAYMATLabel.Name = "nGAYMATLabel";
+            nGAYMATLabel.Size = new System.Drawing.Size(68, 16);
+            nGAYMATLabel.TabIndex = 12;
+            nGAYMATLabel.Text = "Ngày mất:";
             // 
             // tacGiaBS
             // 
@@ -287,7 +301,7 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlTop.Size = new System.Drawing.Size(833, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1099, 30);
             // 
             // barDockControlBottom
             // 
@@ -296,7 +310,7 @@
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 517);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.barDockControlBottom.Size = new System.Drawing.Size(833, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1099, 0);
             // 
             // barDockControlLeft
             // 
@@ -311,7 +325,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(833, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1099, 30);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 487);
@@ -358,12 +372,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(833, 487);
+            this.panel1.Size = new System.Drawing.Size(1099, 487);
             this.panel1.TabIndex = 19;
             // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(nGAYMATLabel);
+            this.panel3.Controls.Add(this.NGAYMATT);
             this.panel3.Controls.Add(dIENGIAILabel);
             this.panel3.Controls.Add(this.DIENGIAII);
             this.panel3.Controls.Add(pHONGCACHCHINHLabel);
@@ -380,8 +396,22 @@
             this.panel3.Enabled = false;
             this.panel3.Location = new System.Drawing.Point(0, 291);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(833, 196);
+            this.panel3.Size = new System.Drawing.Size(1099, 196);
             this.panel3.TabIndex = 2;
+            // 
+            // NGAYMATT
+            // 
+            this.NGAYMATT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tacGiaBS, "NGAYMAT", true));
+            this.NGAYMATT.EditValue = null;
+            this.NGAYMATT.Location = new System.Drawing.Point(974, 23);
+            this.NGAYMATT.MenuManager = this.barManager1;
+            this.NGAYMATT.Name = "NGAYMATT";
+            this.NGAYMATT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NGAYMATT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NGAYMATT.Size = new System.Drawing.Size(167, 22);
+            this.NGAYMATT.TabIndex = 13;
             // 
             // DIENGIAII
             // 
@@ -458,7 +488,7 @@
             this.tACGIAGridControl.Margin = new System.Windows.Forms.Padding(4);
             this.tACGIAGridControl.MenuManager = this.barManager1;
             this.tACGIAGridControl.Name = "tACGIAGridControl";
-            this.tACGIAGridControl.Size = new System.Drawing.Size(833, 232);
+            this.tACGIAGridControl.Size = new System.Drawing.Size(1099, 232);
             this.tACGIAGridControl.TabIndex = 1;
             this.tACGIAGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -482,6 +512,7 @@
             this.colTEN.FieldName = "TEN";
             this.colTEN.MinWidth = 25;
             this.colTEN.Name = "colTEN";
+            this.colTEN.OptionsColumn.ReadOnly = true;
             this.colTEN.Visible = true;
             this.colTEN.VisibleIndex = 0;
             this.colTEN.Width = 94;
@@ -492,6 +523,7 @@
             this.colNGAYSINH.FieldName = "NGAYSINH";
             this.colNGAYSINH.MinWidth = 25;
             this.colNGAYSINH.Name = "colNGAYSINH";
+            this.colNGAYSINH.OptionsColumn.ReadOnly = true;
             this.colNGAYSINH.Visible = true;
             this.colNGAYSINH.VisibleIndex = 1;
             this.colNGAYSINH.Width = 94;
@@ -502,6 +534,7 @@
             this.colNGAYMAT.FieldName = "NGAYMAT";
             this.colNGAYMAT.MinWidth = 25;
             this.colNGAYMAT.Name = "colNGAYMAT";
+            this.colNGAYMAT.OptionsColumn.ReadOnly = true;
             this.colNGAYMAT.Visible = true;
             this.colNGAYMAT.VisibleIndex = 2;
             this.colNGAYMAT.Width = 94;
@@ -512,6 +545,7 @@
             this.colQUOCTICH.FieldName = "QUOCTICH";
             this.colQUOCTICH.MinWidth = 25;
             this.colQUOCTICH.Name = "colQUOCTICH";
+            this.colQUOCTICH.OptionsColumn.ReadOnly = true;
             this.colQUOCTICH.Visible = true;
             this.colQUOCTICH.VisibleIndex = 3;
             this.colQUOCTICH.Width = 94;
@@ -522,6 +556,7 @@
             this.colTHOIDAI.FieldName = "THOIDAI";
             this.colTHOIDAI.MinWidth = 25;
             this.colTHOIDAI.Name = "colTHOIDAI";
+            this.colTHOIDAI.OptionsColumn.ReadOnly = true;
             this.colTHOIDAI.Visible = true;
             this.colTHOIDAI.VisibleIndex = 4;
             this.colTHOIDAI.Width = 94;
@@ -532,6 +567,7 @@
             this.colPHONGCACHCHINH.FieldName = "PHONGCACHCHINH";
             this.colPHONGCACHCHINH.MinWidth = 25;
             this.colPHONGCACHCHINH.Name = "colPHONGCACHCHINH";
+            this.colPHONGCACHCHINH.OptionsColumn.ReadOnly = true;
             this.colPHONGCACHCHINH.Visible = true;
             this.colPHONGCACHCHINH.VisibleIndex = 5;
             this.colPHONGCACHCHINH.Width = 94;
@@ -542,6 +578,7 @@
             this.colDIENGIAI.FieldName = "DIENGIAI";
             this.colDIENGIAI.MinWidth = 25;
             this.colDIENGIAI.Name = "colDIENGIAI";
+            this.colDIENGIAI.OptionsColumn.ReadOnly = true;
             this.colDIENGIAI.Visible = true;
             this.colDIENGIAI.VisibleIndex = 6;
             this.colDIENGIAI.Width = 94;
@@ -552,14 +589,15 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(833, 59);
+            this.panel2.Size = new System.Drawing.Size(1099, 59);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // FormTG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 517);
+            this.ClientSize = new System.Drawing.Size(1099, 517);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -576,6 +614,8 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NGAYMATT.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NGAYMATT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DIENGIAII.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PHONGCACHCHINHH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.THOIDAII.Properties)).EndInit();
@@ -631,5 +671,6 @@
         private DevExpress.XtraEditors.TextEdit QUOCTICHH;
         private DevExpress.XtraEditors.DateEdit NGAYSINHH;
         private DevExpress.XtraEditors.TextEdit TENN;
+        private DevExpress.XtraEditors.DateEdit NGAYMATT;
     }
 }

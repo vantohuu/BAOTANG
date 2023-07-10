@@ -218,6 +218,16 @@ namespace QLVT
                 return;
             }
 
+            if (NGAYMATT.Text.Trim() != "")
+            {
+               if (DateTime.Parse(NGAYSINHH.Text.ToString()) >= DateTime.Parse(NGAYMATT.Text.ToString()))
+                {
+                    MessageBox.Show("Ngày sinh không lớn hơn ngày mất!", "", MessageBoxButtons.OK);
+                    NGAYMATT.Focus();
+                    return;
+                }    
+            }
+
             if (PHONGCACHCHINHH.Text.Trim() == "")
             {
                 MessageBox.Show("Phong cách chính không được để trống!", "", MessageBoxButtons.OK);
@@ -338,6 +348,11 @@ namespace QLVT
             btnGhi.Enabled = btnHuy.Enabled = false;
             tACGIAGridControl.Enabled = true;
             tacGiaBS.Position = vitri;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

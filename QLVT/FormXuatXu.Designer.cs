@@ -66,6 +66,7 @@
             this.tableAdapterManager = new QLVT.BAOTANGDataSetTableAdapters.TableAdapterManager();
             this.tpntTA = new QLVT.BAOTANGDataSetTableAdapters.TPNTTableAdapter();
             this.tpntBS = new System.Windows.Forms.BindingSource(this.components);
+            this.tPNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             iDLabel = new System.Windows.Forms.Label();
             tENQUOCGIALabel = new System.Windows.Forms.Label();
             tHOIDAILabel = new System.Windows.Forms.Label();
@@ -86,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xuatxuGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpntBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // iDLabel
@@ -450,6 +452,11 @@
             this.tpntBS.DataMember = "TPNT";
             this.tpntBS.DataSource = this.BAOTANGDS;
             // 
+            // tPNTBindingSource
+            // 
+            this.tPNTBindingSource.DataMember = "FK_TPNT_XUATXU";
+            this.tPNTBindingSource.DataSource = this.xuatXuBS;
+            // 
             // FormXuatXu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -482,6 +489,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.xuatxuGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tpntBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPNTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,5 +530,6 @@
         private DevExpress.XtraEditors.TextEdit ID;
         private BAOTANGDataSetTableAdapters.TPNTTableAdapter tpntTA;
         private System.Windows.Forms.BindingSource tpntBS;
+        private System.Windows.Forms.BindingSource tPNTBindingSource;
     }
 }

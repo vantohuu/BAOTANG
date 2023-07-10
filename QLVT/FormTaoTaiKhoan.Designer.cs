@@ -116,7 +116,7 @@
             this.buttonTao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonTao.BackColor = System.Drawing.Color.GreenYellow;
             this.buttonTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTao.Location = new System.Drawing.Point(356, 326);
+            this.buttonTao.Location = new System.Drawing.Point(371, 324);
             this.buttonTao.Name = "buttonTao";
             this.buttonTao.Size = new System.Drawing.Size(145, 32);
             this.buttonTao.TabIndex = 8;
