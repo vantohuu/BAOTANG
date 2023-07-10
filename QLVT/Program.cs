@@ -15,7 +15,7 @@ namespace QLVT
         public static String connstr;
         public static SqlDataAdapter da;
         public static SqlDataReader myReader;
-        public static String servername = "HP";
+        public static String servername = "LAPTOP-SGNC2IK1";
         public static String username = "";
         public static String password = "";
         public static String database = "BAOTANG";

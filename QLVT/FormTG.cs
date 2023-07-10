@@ -257,7 +257,7 @@ namespace QLVT
 
             if (check_them == true || ten != TENN.Text.ToString().Trim())
             {
-                String checkID = "EXEC [dbo].[sp_Check_Exists_Id_Char] 'TACGIA', 'TEN' ,'"
+                String checkID = "EXEC [dbo].[sp_Check_Exists_TenTG_Char] 'TACGIA', 'TEN' ,N'"
                     + TENN.Text.ToString().Trim() + "'";
                 Console.WriteLine(TENN);
                 try
@@ -296,7 +296,7 @@ namespace QLVT
                 if (check_them)
                 {
 
-                    query = "DELETE DBO.TACGIA WHERE TEN = '" + TENN.Text.Trim() + "'";
+                    query = "DELETE DBO.TACGIA WHERE TEN = N'" + TENN.Text.Trim() + "'";
 
                 }
                 else
