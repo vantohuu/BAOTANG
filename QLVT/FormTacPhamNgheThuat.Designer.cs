@@ -139,9 +139,9 @@
             nAMSTLabel.AutoSize = true;
             nAMSTLabel.Location = new System.Drawing.Point(369, 37);
             nAMSTLabel.Name = "nAMSTLabel";
-            nAMSTLabel.Size = new System.Drawing.Size(93, 16);
+            nAMSTLabel.Size = new System.Drawing.Size(120, 16);
             nAMSTLabel.TabIndex = 2;
-            nAMSTLabel.Text = "Năm sáng tác:";
+            nAMSTLabel.Text = "Thời gian sáng tác:";
             // 
             // cHUDELabel
             // 
@@ -599,7 +599,7 @@
             // 
             this.NAMSANGTAC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.tpntBS, "NAMST", true));
             this.NAMSANGTAC.EditValue = null;
-            this.NAMSANGTAC.Location = new System.Drawing.Point(485, 34);
+            this.NAMSANGTAC.Location = new System.Drawing.Point(516, 34);
             this.NAMSANGTAC.Margin = new System.Windows.Forms.Padding(4);
             this.NAMSANGTAC.MenuManager = this.barManager1;
             this.NAMSANGTAC.Name = "NAMSANGTAC";

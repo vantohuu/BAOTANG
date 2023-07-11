@@ -46,7 +46,7 @@ namespace QLVT
         private void RESTORE_Click(object sender, EventArgs e)
         {
           
-            if (MessageBox.Show("Nếu thành công app sẽ tắt. Bạn có thực sự muốn RESTORE không!", "Xác nhận", MessageBoxButtons.OKCancel)
+            if (MessageBox.Show("Nếu thành công app sẽ tự khởi động lại. Bạn có thực sự muốn RESTORE không!", "Xác nhận", MessageBoxButtons.OKCancel)
                  == DialogResult.OK)
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -73,14 +73,14 @@ namespace QLVT
                             " RESTORE DATABASE [BAOTANG] FROM DISK =  '"+ openFileDialog.FileName + "'WITH REPLACE" +
                             " ALTER DATABASE [BAOTANG]  SET ONLINE";
                         Program.ExecSqlNonQuery(query);
-                        MessageBox.Show("Restore thành công. XONG! Vui lòng chạy lại ứng dụng.", "", MessageBoxButtons.OK);
+                        MessageBox.Show("Restore thành công. XONG! Vui lòng nhấn OK để chạy lại ứng dụng.", "", MessageBoxButtons.OK);
                         this.RSTA.Fill(this.BAOTANGDS.RESTORE);
                         DataRowView dt = ((DataRowView)RSBS[0]);
                         String restore_date = dt["restore_date"].ToString();
                         Console.WriteLine(restore_date);
                         labelLS.Text = "(Lịch sử gần nhất:" + restore_date + ")";
-                        Application.Exit();
                         this.Enabled = true;
+                        Application.Restart();
                     }
                     catch (Exception ex)
                     {

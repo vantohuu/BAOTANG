@@ -36,11 +36,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTaiKhoan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.PASSWORD = new DevExpress.XtraEditors.TextEdit();
-            this.loginBS = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBS = new System.Windows.Forms.BindingSource(this.components);
             this.userBS = new System.Windows.Forms.BindingSource(this.components);
             this.nhanvienBS = new System.Windows.Forms.BindingSource(this.components);
             this.tAIKHOANDataSet1 = new QLVT.TAIKHOANDataSet1();
+            this.GROUPP = new System.Windows.Forms.ComboBox();
+            this.PASSWORD = new DevExpress.XtraEditors.TextEdit();
+            this.loginBS = new System.Windows.Forms.BindingSource(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -74,20 +77,18 @@
             this.userTA = new QLVT.TAIKHOANDataSet1TableAdapters.USERTableAdapter();
             this.groupTA = new QLVT.TAIKHOANDataSet1TableAdapters.GROUPTableAdapter();
             this.loginTA = new QLVT.TAIKHOANDataSet1TableAdapters.LOGINTableAdapter();
-            this.groupBS = new System.Windows.Forms.BindingSource(this.components);
-            this.GROUPP = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             loginnameLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PASSWORD.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginBS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvienBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PASSWORD.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LOGINNAME.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginnameOld.Properties)).BeginInit();
@@ -95,7 +96,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupBS)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -172,6 +172,52 @@
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBS, "name", true));
+            this.comboBox1.DataSource = this.groupBS;
+            this.comboBox1.DisplayMember = "name";
+            this.comboBox1.Enabled = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(581, 118);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(125, 24);
+            this.comboBox1.TabIndex = 28;
+            this.comboBox1.ValueMember = "name";
+            // 
+            // groupBS
+            // 
+            this.groupBS.DataMember = "USER_GROUP";
+            this.groupBS.DataSource = this.userBS;
+            // 
+            // userBS
+            // 
+            this.userBS.DataMember = "NHANVIEN_USER";
+            this.userBS.DataSource = this.nhanvienBS;
+            // 
+            // nhanvienBS
+            // 
+            this.nhanvienBS.DataMember = "NHANVIEN";
+            this.nhanvienBS.DataSource = this.tAIKHOANDataSet1;
+            // 
+            // tAIKHOANDataSet1
+            // 
+            this.tAIKHOANDataSet1.DataSetName = "TAIKHOANDataSet1";
+            this.tAIKHOANDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // GROUPP
+            // 
+            this.GROUPP.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.GROUPP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBS, "name", true));
+            this.GROUPP.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.groupBS, "name", true));
+            this.GROUPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GROUPP.FormattingEnabled = true;
+            this.GROUPP.Location = new System.Drawing.Point(581, 118);
+            this.GROUPP.Name = "GROUPP";
+            this.GROUPP.Size = new System.Drawing.Size(125, 24);
+            this.GROUPP.TabIndex = 27;
+            // 
             // PASSWORD
             // 
             this.PASSWORD.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -189,21 +235,6 @@
             // 
             this.loginBS.DataMember = "USER_LOGIN";
             this.loginBS.DataSource = this.userBS;
-            // 
-            // userBS
-            // 
-            this.userBS.DataMember = "NHANVIEN_USER";
-            this.userBS.DataSource = this.nhanvienBS;
-            // 
-            // nhanvienBS
-            // 
-            this.nhanvienBS.DataMember = "NHANVIEN";
-            this.nhanvienBS.DataSource = this.tAIKHOANDataSet1;
-            // 
-            // tAIKHOANDataSet1
-            // 
-            this.tAIKHOANDataSet1.DataSetName = "TAIKHOANDataSet1";
-            this.tAIKHOANDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // barManager1
             // 
@@ -531,37 +562,6 @@
             // 
             this.loginTA.ClearBeforeFill = true;
             // 
-            // groupBS
-            // 
-            this.groupBS.DataMember = "USER_GROUP";
-            this.groupBS.DataSource = this.userBS;
-            // 
-            // GROUPP
-            // 
-            this.GROUPP.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.GROUPP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBS, "name", true));
-            this.GROUPP.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.groupBS, "name", true));
-            this.GROUPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GROUPP.FormattingEnabled = true;
-            this.GROUPP.Location = new System.Drawing.Point(581, 118);
-            this.GROUPP.Name = "GROUPP";
-            this.GROUPP.Size = new System.Drawing.Size(125, 24);
-            this.GROUPP.TabIndex = 27;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBS, "name", true));
-            this.comboBox1.DataSource = this.groupBS;
-            this.comboBox1.DisplayMember = "name";
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(581, 118);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(125, 24);
-            this.comboBox1.TabIndex = 28;
-            this.comboBox1.ValueMember = "name";
-            // 
             // FormTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -573,16 +573,17 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormTaiKhoan";
-            this.Text = "FormTaiKhoan";
+            this.Text = "Tài khoản";
             this.Load += new System.EventHandler(this.FormTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PASSWORD.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loginBS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanvienBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tAIKHOANDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PASSWORD.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loginBS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LOGINNAME.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginnameOld.Properties)).EndInit();
@@ -591,7 +592,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTimeEdit7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupBS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
