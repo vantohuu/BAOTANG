@@ -120,6 +120,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReportTrienLam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,12 @@
     </Compile>
     <Compile Include="FormTacPhamNgheThuat.Designer.cs">
       <DependentUpon>FormTacPhamNgheThuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaiKhoan.Designer.cs">
+      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTaoTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -181,6 +193,14 @@
     </Compile>
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TAIKHOANDataSet1.cs">
+      <DependentUpon>TAIKHOANDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TAIKHOANDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TAIKHOANDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="XtraReportTacGia.cs">
       <SubType>Component</SubType>
@@ -221,6 +241,9 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReportTrienLam.resx">
       <DependentUpon>FormReportTrienLam.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTacPhamNgheThuat.resx">
       <DependentUpon>FormTacPhamNgheThuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTaiKhoan.resx">
+      <DependentUpon>FormTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTaoTaiKhoan.resx">
       <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
@@ -292,6 +318,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TAIKHOANDataSet1.xsc">
+      <DependentUpon>TAIKHOANDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TAIKHOANDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TAIKHOANDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TAIKHOANDataSet1.xss">
+      <DependentUpon>TAIKHOANDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\layers3.svg" />
@@ -358,6 +395,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bo_mydetails.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_customer1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_contact.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

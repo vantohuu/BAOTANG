@@ -161,6 +161,7 @@
             // 
             // label1
             // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.Location = new System.Drawing.Point(532, 17);

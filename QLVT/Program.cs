@@ -20,7 +20,7 @@ namespace QLVT
         public static String password = "";
         public static String database = "BAOTANG";
         public static String mloginDN = "";
-        public static String passworDN = "";
+        public static String passwordDN = "";
         public static String mHoTen = "";
         public static String mGroup = "";
         public static String mlogin = "";

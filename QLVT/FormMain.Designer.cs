@@ -58,6 +58,8 @@
             this.btn_restore = new DevExpress.XtraBars.BarButtonItem();
             this.btnTTK = new DevExpress.XtraBars.BarButtonItem();
             this.btnXTK = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNhanVien = new DevExpress.XtraBars.BarButtonItem();
+            this.btnTaiKhoan = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageNhapXuat = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -125,10 +127,12 @@
             this.rp_trienlam,
             this.btn_restore,
             this.btnTTK,
-            this.btnXTK});
+            this.btnXTK,
+            this.btnNhanVien,
+            this.btnTaiKhoan});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(6);
-            this.ribbonControl1.MaxItemId = 55;
+            this.ribbonControl1.MaxItemId = 57;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 601;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -334,6 +338,7 @@
             this.btnTTK.Id = 53;
             this.btnTTK.ImageOptions.SvgImage = global::QLVT.Properties.Resources.actions_user;
             this.btnTTK.Name = "btnTTK";
+            this.btnTTK.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnTTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick_1);
             // 
             // btnXTK
@@ -343,7 +348,26 @@
             this.btnXTK.Id = 54;
             this.btnXTK.ImageOptions.SvgImage = global::QLVT.Properties.Resources.bo_mydetails;
             this.btnXTK.Name = "btnXTK";
+            this.btnXTK.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnXTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.Caption = "Nhân viên";
+            this.btnNhanVien.Enabled = false;
+            this.btnNhanVien.Id = 55;
+            this.btnNhanVien.ImageOptions.SvgImage = global::QLVT.Properties.Resources.bo_customer1;
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhanVien_ItemClick);
+            // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.Caption = "Tài khoản";
+            this.btnTaiKhoan.Enabled = false;
+            this.btnTaiKhoan.Id = 56;
+            this.btnTaiKhoan.ImageOptions.SvgImage = global::QLVT.Properties.Resources.bo_contact;
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTaiKhoan_ItemClick);
             // 
             // ribbonPageNhapXuat
             // 
@@ -416,8 +440,10 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnNhanVien);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnTTK);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnXTK);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnTaiKhoan);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // repositoryItemPictureEdit1
@@ -578,6 +604,8 @@
         private DevExpress.XtraBars.BarButtonItem btnTTK;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem btnXTK;
+        private DevExpress.XtraBars.BarButtonItem btnNhanVien;
+        private DevExpress.XtraBars.BarButtonItem btnTaiKhoan;
     }
 }
 

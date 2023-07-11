@@ -141,6 +141,7 @@ namespace QLVT
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             vitri = tacGiaBS.Position;
             panel3.Enabled = true;
             tacGiaBS.AddNew();

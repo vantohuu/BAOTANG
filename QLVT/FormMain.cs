@@ -48,7 +48,7 @@ namespace QLVT
                     f.Show();
                 }
             }
-            
+
         }
 
         public void HienThiMenu()
@@ -63,9 +63,11 @@ namespace QLVT
             {
                 btn_backup.Enabled = false;
                 btn_restore.Enabled = false;
-                ribbonPageBaoCao.Visible  = false;
+                ribbonPageBaoCao.Visible = false;
                 btnTTK.Enabled = false;
                 btnXTK.Enabled = false;
+                btnNhanVien.Enabled = false;
+                btnTaiKhoan.Enabled = false;
 
             }
             else
@@ -75,6 +77,9 @@ namespace QLVT
                 btn_restore.Enabled = true;
                 btnTTK.Enabled = true;
                 btnXTK.Enabled = true;
+                btnTaiKhoan.Enabled = true;
+
+                btnNhanVien.Enabled = true;
             }
         }
 
@@ -113,10 +118,13 @@ namespace QLVT
 
             DangXuat();
             ribbonPageBaoCao.Visible = ribbonPageNhapXuat.Visible = false;
-            barButtonItemDangXuat.Enabled = btn_backup.Enabled= btn_restore.Enabled = false;
+            barButtonItemDangXuat.Enabled = btn_backup.Enabled = btn_restore.Enabled = false;
             barButtonItemDangNhap.Enabled = true;
             btnTTK.Enabled = false;
             btnXTK.Enabled = false;
+            btnNhanVien.Enabled = false;
+            btnTaiKhoan.Enabled = false;
+
         }
 
         private void strip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -275,6 +283,35 @@ namespace QLVT
                     f.MdiParent = this;
                     f.Show();
                 }
+            }
+        }
+
+        private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormNhanVien));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormNhanVien f = new FormNhanVien();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void btnTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormTaiKhoan));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormTaiKhoan f = new FormTaiKhoan();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+
             }
         }
     }

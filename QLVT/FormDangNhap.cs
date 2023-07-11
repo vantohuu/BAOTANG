@@ -75,34 +75,64 @@ namespace QLVT
 
             if (Program.KetNoi() == 0) return;
 
-            Program.mloginDN = Program.mlogin;
-            Program.passworDN = Program.password;
 
-            
+            try
+            {
+                String checkDangNhap = "declare @result int " +
+                      "exec @result = [sp_Check_DangNhap_Login]  '" + Program.mlogin + "'  " +
+                      "select @result";
+                Console.WriteLine(checkDangNhap);
+                Program.myReader = Program.ExecSqlDataReader(checkDangNhap);
+                if (Program.myReader == null) { return; }
+                Program.myReader.Read();
+                if (Program.myReader.GetInt32(0) == 1)
+                {
+                    MessageBox.Show("Không có nhân viên nào tương ứng với tài khoản này!", "Thông báo", MessageBoxButtons.OK);
+                    teUserName.Focus();
+                    Program.myReader.Close();
+                    return;
+                }
+                else
+                {
+                    Program.myReader.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối! " + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+
+            Program.mloginDN = Program.mlogin;
+            Program.passwordDN = Program.password;
+
+
 
             string strLenh = "EXEC SP_Lay_Thong_Tin_NV_Tu_Login '" + Program.mlogin + "'";
 
             Program.myReader = Program.ExecSqlDataReader(strLenh);
             if (Program.myReader == null) return;
             Program.myReader.Read();
-            Program.username = Program.myReader.GetString(0);
+            Program.username = Program.myReader.GetInt32(0).ToString();
 
             if (Convert.IsDBNull(Program.username))
             {
                 MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu " +
                     "\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
-            }    
-            Program.mHoTen = Program.myReader.GetString(0);
-            Program.mGroup = Program.myReader.GetString(1);
+            }
+            Program.mHoTen = Program.myReader.GetString(1);
+            Program.mGroup = Program.myReader.GetString(2);
             Program.myReader.Close();
 
             Program.conn.Close();
 
             Program.formChinh.HOTEN.Text = "Họ tên : " + Program.mHoTen;
-            Program.formChinh.NHOM.Text = "Nhóm : " + Program.mGroup;
+            Program.formChinh.NHOM.Text = "Quyền : " + Program.mGroup;
             Program.formChinh.HienThiMenu();
-
-            this.Close();   
+            this.Close();
         }
+
     }
 }

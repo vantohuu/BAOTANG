@@ -118,17 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="alignhorizontalbottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alignhorizontalbottom.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="new1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="actions_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\actions_user.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="alignverticalcenter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alignverticalcenter1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="bo_audit_changehistory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bo_audit_changehistory.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="doublenext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doublenext.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="cleartablestyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cleartablestyle.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -139,11 +142,14 @@
   <data name="charttype_polarrangearea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\charttype_polarrangearea.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="alignverticalcenter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alignverticalcenter1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="open2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\open2.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="alignhorizontaltop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\alignhorizontaltop.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="bo_mydetails" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_mydetails.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="bo_customer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_customer1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="alignverticalcenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\alignverticalcenter.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -160,14 +166,14 @@
   <data name="layers3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\layers3.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="stop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stop.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="actions_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\actions_user.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="open2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\open2.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="alignhorizontalbottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alignhorizontalbottom.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="doublenext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doublenext.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="alignhorizontaltop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alignhorizontaltop.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="bo_invoice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bo_invoice.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -181,7 +187,7 @@
   <data name="bo_customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bo_customer.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="bo_mydetails" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bo_mydetails.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="bo_contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_contact.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
 </root>
