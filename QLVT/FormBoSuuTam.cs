@@ -47,8 +47,8 @@ namespace QLVT
             }
             else
             {
-                btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
-                    = btnHuy.Enabled = btnGhi.Enabled = true;
+                btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = true;
+                btnHuy.Enabled = btnGhi.Enabled = false;
             }
         }
 

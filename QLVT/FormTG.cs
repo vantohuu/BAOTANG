@@ -52,8 +52,8 @@ namespace QLVT
             }
             else
             {
-                btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
-                    = btnHuy.Enabled = btnGhi.Enabled = true;
+                btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = true;
+                 btnHuy.Enabled = btnGhi.Enabled = false;
             }
 
         }
@@ -101,7 +101,7 @@ namespace QLVT
                 return;
 
             }
-            if (MessageBox.Show("Bạn có thực sự muốn xóa nhân viên này!", "Xác nhận", MessageBoxButtons.OKCancel)
+            if (MessageBox.Show("Bạn có thực sự muốn xóa tác giả này!", "Xác nhận", MessageBoxButtons.OKCancel)
                == DialogResult.OK)
             {
                 try
