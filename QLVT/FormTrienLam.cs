@@ -54,7 +54,8 @@ namespace QLVT
             else
             {
                 btnThemTL.Enabled = btnXoaTL.Enabled = btnSuaTL.Enabled
-                    = btnHuyTL.Enabled = btnGhiTL.Enabled = true;
+                     = true;
+                btnHuy.Enabled = btnGhi.Enabled = false;
             }
 
         }

@@ -44,7 +44,6 @@ namespace QLVT
         private void FormTacPhamNgheThuat_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'BAOTANGDS.CT_TRIENLAM' table. You can move, or remove it, as needed.
-            this.cT_TRIENLAMTableAdapter.Fill(this.BAOTANGDS.CT_TRIENLAM);
             // TODO: This line of code loads data into the 'BAOTANGDS.CTTPNT' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'BAOTANGDS.DIMUON' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'BAOTANGDS.TTXUATXU' table. You can move, or remove it, as needed.
@@ -62,6 +61,8 @@ namespace QLVT
             this.tacgiaTA.Fill(this.BAOTANGDS.TTTACGIA);
             this.cttpntTA.Connection.ConnectionString = Program.connstr;
             this.cttpntTA.Fill(this.BAOTANGDS.CTTPNT);
+            this.cT_TRIENLAMTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.cT_TRIENLAMTableAdapter.Fill(this.BAOTANGDS.CT_TRIENLAM);
 
             CBLH.Items.Add("Điêu khắc - Tạc tượng");
             CBLH.Items.Add("Hội hoại");
@@ -77,7 +78,8 @@ namespace QLVT
             else
             {
                 btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
-                    = btnHuy.Enabled = btnGhi.Enabled = true;
+                    =  true;
+                btnHuy.Enabled = btnGhi.Enabled = false;
             }
         }
 
